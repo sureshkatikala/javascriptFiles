@@ -11,5 +11,7 @@
       //var url = forwardingAddress;
        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles/init.js';
        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-       var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+       var x = document.getElementsByTagName('script')[0];
+       console.log(x);
+       x.parentNode.insertBefore(s, x);
    })();
