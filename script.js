@@ -10,8 +10,10 @@ function addElement () {
   newDiv.appendChild(newContent);  
 
   // add the newly created element and its content into the DOM 
-  var currentDiv = document.getElementById("PageContainer"); 
+//   var currentDiv = document.getElementById("PageContainer"); 
 //   document.body.insertBefore(newDiv, currentDiv); 
-    document.getElementsByTagName('head')[0].appendChild(newContent);
+    // document.getElementsByTagName('head')[0].appendChild(newContent);
+    document.head.appendChild(newDiv);
+
 
 }
