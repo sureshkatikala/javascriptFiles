@@ -10,5 +10,9 @@
   x.setAttribute("width", "48");
   x.setAttribute("height", "48");
   x.setAttribute("alt", "whatsapp icon");
-  x.style = "bottom:0;right:0;position:absolute;z-index: 9999"
+  x.style = "bottom:0;right:0;position:fixed;z-index: 9999"
+x.onclick = function(){
+  window.open("https://wa.me/919490339525", "_blank");
+};
   document.body.appendChild(x);
+
