@@ -27,10 +27,10 @@ newDiv.style = "bottom:0;right:0;position:fixed;z-index: 9999"
 newDiv.appendChild(x);  
 //newDiv.appendChild(facebookImage)
 
-<div class="fb-customerchat"
- page_id="<ENTER-YOUR-FACEBOOK-ID-HERE>"
- minimized="true">
-</div>
+// <div class="fb-customerchat"
+//  page_id="<ENTER-YOUR-FACEBOOK-ID-HERE>"
+//  minimized="true">
+// </div>
 var facebookDiv = document.createElement("div");
 facebookDiv.setAttribute("class", "fb-customerchat");
 facebookDiv.setAttribute("page_id", "1629986620602076");
