@@ -37,7 +37,6 @@ facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
 var my_awesome_script = document.createElement('script');
 my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@6dc91d5/fbchatplugin.js');
-newDiv.appendChild(my_awesome_script);
 //  window.fbAsyncInit = function() {
 //     FB.init({
 //       appId            : '1102875969894081',
@@ -60,6 +59,7 @@ newDiv.appendChild(my_awesome_script);
 //    }(document, 'script', 'facebook-jssdk'));
 
 newDiv.appendChild(facebookDiv);
+newDiv.appendChild(my_awesome_script);
 document.body.appendChild(newDiv);
 
 /*
