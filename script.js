@@ -33,22 +33,24 @@ newDiv.appendChild(x);
 // </div>
 var facebookDiv = document.createElement("div");
 facebookDiv.setAttribute("class", "fb-customerchat");
-facebookDiv.setAttribute("page_id", "1629986620602076");
+facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
-
- window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '912333495590130',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.11'
-    });
-  };
-var js, fjs = document.getElementsByTagName("script")[0];
-js = document.createElement("script");
-js.setAttribute("id", "facebook-jssdk");
-js.setAttribute("src", "https://connect.facebook.net/en_US/sdk.js");
-fjs.parentNode.insertBefore(js, fjs);
+var my_awesome_script = document.createElement('script');
+my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles/fbchatplugin.js');
+newDiv.appendChild(my_awesome_script);
+//  window.fbAsyncInit = function() {
+//     FB.init({
+//       appId            : '1102875969894081',
+//       autoLogAppEvents : true,
+//       xfbml            : true,
+//       version          : 'v2.11'
+//     });
+//   };
+// var js, fjs = document.getElementsByTagName("script")[0];
+// js = document.createElement("script");
+// js.setAttribute("id", "facebook-jssdk");
+// js.setAttribute("src", "https://connect.facebook.net/en_US/sdk.js");
+// fjs.parentNode.insertBefore(js, fjs);
 // (function(d, s, id){
 //      var js, fjs = d.getElementsByTagName(s)[0];
 //      if (d.getElementById(id)) {return;}
@@ -57,10 +59,17 @@ fjs.parentNode.insertBefore(js, fjs);
 //      fjs.parentNode.insertBefore(js, fjs);
 //    }(document, 'script', 'facebook-jssdk'));
 
-newDiv.appendChild(facebookDiv)
+newDiv.appendChild(facebookDiv);
 document.body.appendChild(newDiv);
 
+/*
+var my_awesome_script = document.createElement('script');
 
+my_awesome_script.setAttribute('src','http://example.com/site.js');
+
+document.head.appendChild(my_awesome_script);
+
+*/
 // var facebookImage = document.createElement("IMG");
 // facebookImage.setAttribute("src", "https://cdn.pixabay.com/photo/2016/07/03/18/35/messenger-1495274_960_720.png");
 // facebookImage.setAttribute("width", "48");
