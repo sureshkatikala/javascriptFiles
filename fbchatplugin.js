@@ -10,7 +10,7 @@
  var js = document.createElement("script");
  js.setAttribute("id", "facebook-jssdk");
  js.setAttribute("src", "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js");
- fjs.parentNode.insertBefore(js, fjs);
+ fjs.appendChild(js);
 //  (function(d, s, id){
 //       var js, fjs = d.getElementsByTagName(s)[0];
 //       if (d.getElementById(id)) {return;}
