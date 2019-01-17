@@ -21,7 +21,7 @@ x.setAttribute("alt", "whatsapp icon");
 x.onclick = function(){
   window.open("https://wa.me/919490339525", "_blank");
 }
-newDiv.style = "bottom:0;right:0;position:fixed;z-index: 9999"
+newDiv.style = "bottom:80px;right:30px;position:fixed;z-index: 9999"
 
 
 newDiv.appendChild(x);  
