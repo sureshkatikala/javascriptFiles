@@ -6,7 +6,7 @@
        version          : 'v2.11'
      });
  };
- var fjs = document.getElementsById("chat-widget");
+ var fjs = document.getElementById("chat-widget");
  var js = document.createElement("script");
  js.setAttribute("id", "facebook-jssdk");
  js.setAttribute("src", "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js");
