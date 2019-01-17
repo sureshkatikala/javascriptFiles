@@ -37,7 +37,6 @@ facebookDiv.setAttribute("class", "fb-customerchat");
 facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
 var my_awesome_script = document.createElement('script');
-my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@b4606fc/fbchatplugin.js');
 //  window.fbAsyncInit = function() {
 //     FB.init({
 //       appId            : '1102875969894081',
@@ -62,6 +61,8 @@ my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala
 newDiv.appendChild(facebookDiv);
 newDiv.appendChild(my_awesome_script);
 document.body.appendChild(newDiv);
+my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@b4606fc/fbchatplugin.js');
+
 
 /*
 var my_awesome_script = document.createElement('script');
