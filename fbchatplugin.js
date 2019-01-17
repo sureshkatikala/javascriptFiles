@@ -9,7 +9,7 @@
  var js, fjs = document.getElementsByTagName("script")[0];
  js = document.createElement("script");
  js.setAttribute("id", "facebook-jssdk");
- js.setAttribute("src", "https://connect.facebook.net/en_US/sdk.js");
+ js.setAttribute("src", "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js");
  fjs.parentNode.insertBefore(js, fjs);
  (function(d, s, id){
       var js, fjs = d.getElementsByTagName(s)[0];
