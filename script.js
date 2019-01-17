@@ -12,19 +12,20 @@
 // }(document, 'script', 'facebook-jssdk'));
 
 
-var newDiv = document.createElement("div"); 
-var x = document.createElement("IMG");
-x.setAttribute("src", "https://image1.jdomni.in/jdomni_email/whatsapp_popup.png?output-format=webp");
-x.setAttribute("width", "48");
-x.setAttribute("height", "48");
-x.setAttribute("alt", "whatsapp icon");
-x.onclick = function(){
+var newDiv = document.createElement("div");
+newDiv.setAttribute("id","chat-widget")
+var whatsapp = document.createElement("IMG");
+whatsapp.setAttribute("src", "https://image1.jdomni.in/jdomni_email/whatsapp_popup.png?output-format=webp");
+whatsapp.setAttribute("width", "48");
+whatsapp.setAttribute("height", "48");
+whatsapp.setAttribute("alt", "whatsapp icon");
+whatsapp.onclick = function(){
   window.open("https://wa.me/919490339525", "_blank");
 }
 newDiv.style = "bottom:80px;right:30px;position:fixed;z-index: 9999"
 
 
-newDiv.appendChild(x);  
+newDiv.appendChild(whatsapp);  
 //newDiv.appendChild(facebookImage)
 
 // <div class="fb-customerchat"
@@ -36,7 +37,7 @@ facebookDiv.setAttribute("class", "fb-customerchat");
 facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
 var my_awesome_script = document.createElement('script');
-my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@6dc91d5/fbchatplugin.js');
+my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@06dbcf0/fbchatplugin.js');
 //  window.fbAsyncInit = function() {
 //     FB.init({
 //       appId            : '1102875969894081',
