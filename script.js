@@ -19,8 +19,35 @@ whatsapp.setAttribute("src", "https://image1.jdomni.in/jdomni_email/whatsapp_pop
 whatsapp.setAttribute("width", "48");
 whatsapp.setAttribute("height", "48");
 whatsapp.setAttribute("alt", "whatsapp icon");
+
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }};
+}
+
 whatsapp.onclick = function(){
-  window.open("https://wa.me/919490339525", "_blank");
+  if( isMobile.any()) { 
+    window.open("https://wa.me/919490339525", "_blank");
+  }
+  else {
+    window.open("https://web.whatsapp.com/send?phone=919490339525", "_blank");
+  }
 }
 newDiv.style = "bottom:80px;right:30px;position:fixed;z-index: 9999"
 
