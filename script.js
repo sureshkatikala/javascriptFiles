@@ -26,9 +26,9 @@ autochatIcon.setAttribute("alt", "Autochat Icon");
 autochatIconContainer.appendChild(autochatIcon);
 autochatIconContainer.onClick = function(){
     var showOptionsContainer = document.getElementById("chat-widget-container");
-    showOptionsContainer.style.display = "none";
+    showOptionsContainer.style.display = "block";
     var autochatImageContainer = document.getElementById("autochat-image-container");
-    autochatImageContainer.style.display = "block";
+    autochatImageContainer.style.display = "none";
 }
 autochatIconContainer.style = "bottom:20px;right:30px;position:fixed;z-index: 9999";
 
@@ -46,9 +46,9 @@ closeButton.setAttribute("height", "48");
 closeButton.setAttribute("alt", "CloseButton");
 closeButton.onClick =  function(){
    var showOptionsContainer = document.getElementById("chat-widget-container");
-    showOptionsContainer.style.display = "block";
+    showOptionsContainer.style.display = "none";
     var autochatImageContainer = document.getElementById("autochat-image-container");
-    autochatImageContainer.style.display = "none";
+    autochatImageContainer.style.display = "block";
 }
 
 var whatsapp = document.createElement("IMG");
@@ -123,7 +123,7 @@ my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala
 
 showOptionsContainer.appendChild(facebookDiv);
 showOptionsContainer.appendChild(my_awesome_script);
-showOptionsContainer.style.display = "block";
+showOptionsContainer.style.display = "none";
 document.body.appendChild(showOptionsContainer);
 document.body.appendChild(autochatIconContainer)
 
