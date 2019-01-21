@@ -23,12 +23,7 @@ autochatIcon.setAttribute("src", "https://autochat.io/images/autochat-favicon/sv
 autochatIcon.setAttribute("width","48");
 autochatIcon.setAttribute("height", "48");
 autochatIcon.setAttribute("alt", "Autochat Icon");
-autochatIcon.onClick = function(){
-    var showOptionsContainer = document.getElementById("chat-widget-container");
-    showOptionsContainer.style.display = "block";
-    var autochatImageContainer = document.getElementById("autochat-image-container");
-    autochatImageContainer.style.display = "none";
-}
+
 autochatIconContainer.appendChild(autochatIcon);
 autochatIconContainer.style = "bottom:110px;right:30px;position:fixed;z-index: 9999";
 
@@ -44,12 +39,7 @@ closeButton.setAttribute("src","https://cdn.jsdelivr.net/gh/sureshkatikala/javas
 closeButton.setAttribute("width","48");
 closeButton.setAttribute("height", "48");
 closeButton.setAttribute("alt", "CloseButton");
-closeButton.onClick =  function(){
-   var showOptionsContainer = document.getElementById("chat-widget-container");
-    showOptionsContainer.style.display = "none";
-    var autochatImageContainer = document.getElementById("autochat-image-container");
-    autochatImageContainer.style.display = "block";
-}
+
 
 var whatsapp = document.createElement("IMG");
 whatsapp.setAttribute("src", "https://image1.jdomni.in/jdomni_email/whatsapp_popup.png");
@@ -87,13 +77,26 @@ whatsapp.onclick = function(){
   }
 }
 showOptionsContainer.style = "bottom:80px;right:30px;position:fixed;z-index: 9999";
-showOptionsContainer.appendChild(whatsapp);  
+showOptionsContainer.appendChild(whatsapp);
+showOptionsContainer.appendChild(closeButton);
 //newDiv.appendChild(facebookImage)
 
 // <div class="fb-customerchat"
 //  page_id="<ENTER-YOUR-FACEBOOK-ID-HERE>"
 //  minimized="true">
 // </div>
+autochatIcon.onClick = function(){
+    var showOptionsContainer = document.getElementById("chat-widget-container");
+    showOptionsContainer.style.display = "block";
+    var autochatImageContainer = document.getElementById("autochat-image-container");
+    autochatImageContainer.style.display = "none";
+}
+closeButton.onClick =  function(){
+   var showOptionsContainer = document.getElementById("chat-widget-container");
+    showOptionsContainer.style.display = "none";
+    var autochatImageContainer = document.getElementById("autochat-image-container");
+    autochatImageContainer.style.display = "block";
+}
 var facebookDiv = document.createElement("div");
 facebookDiv.setAttribute("class", "fb-customerchat");
 facebookDiv.setAttribute("page_id", "829136050510375");
