@@ -87,7 +87,7 @@ showOptionsContainer.appendChild(closeButton);
 // </div>
 autochatIcon.onclick = function(){
     var showOptionsContainer = document.getElementById("chat-widget-container");
-    showOptionsContainer.style.display = "block";
+    showOptionsContainer.style.display = "inline-grid";
     var autochatImageContainer = document.getElementById("autochat-image-container");
     autochatImageContainer.style.display = "none";
 }
@@ -95,7 +95,7 @@ closeButton.onclick =  function(){
    var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "none";
     var autochatImageContainer = document.getElementById("autochat-image-container");
-    autochatImageContainer.style.display = "block";
+    autochatImageContainer.style.display = "inline-grid";
 }
 var facebookDiv = document.createElement("div");
 facebookDiv.setAttribute("class", "fb-customerchat");
