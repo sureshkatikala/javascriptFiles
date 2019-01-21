@@ -30,7 +30,7 @@ autochatIconContainer.onClick = function(){
     var autochatImageContainer = document.getElementById("autochat-image-container");
     autochatImageContainer.style.display = "block";
 }
-showOptionsContainer.style = "bottom:80px;right:30px;position:fixed;z-index: 9999";
+autochatIconContainer.style = "bottom:80px;right:30px;position:fixed;z-index: 9999";
 
 
 var showOptionsContainer = document.createElement("div");
