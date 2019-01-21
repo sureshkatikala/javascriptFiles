@@ -30,6 +30,8 @@ autochatIconContainer.onClick = function(){
     var autochatImageContainer = document.getElementById("autochat-image-container");
     autochatImageContainer.style.display = "block";
 }
+showOptionsContainer.style = "bottom:80px;right:30px;position:fixed;z-index: 9999";
+
 
 var showOptionsContainer = document.createElement("div");
 showOptionsContainer.setAttribute("id", "chat-widget-container");
@@ -82,9 +84,7 @@ whatsapp.onclick = function(){
     window.open("https://web.whatsapp.com/send?phone=919490339525", "_blank");
   }
 }
-showOptionsContainer.style = "bottom:80px;right:30px;position:fixed;z-index: 9999"
-showOptionsContainer.style.display = "block";
-
+showOptionsContainer.style = "bottom:80px;right:30px;position:fixed;z-index: 9999";
 showOptionsContainer.appendChild(whatsapp);  
 //newDiv.appendChild(facebookImage)
 
@@ -121,6 +121,7 @@ my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala
 
 showOptionsContainer.appendChild(facebookDiv);
 showOptionsContainer.appendChild(my_awesome_script);
+showOptionsContainer.style.display = "block";
 document.body.appendChild(showOptionsContainer);
 document.body.appendChild(autochatIconContainer)
 
