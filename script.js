@@ -40,7 +40,7 @@ showOptionsContainer.setAttribute("id","chat-widget-container");
 
 var closeButton = document.createElement("IMG");
 closeButton.setAttribute("id", "close-button-div")
-closeButton.setAttribute("src","https://drive.google.com/file/d/1_f6JU_otRKmF_35ERc4964YDkqqcVB1Z/view?usp=sharing");
+closeButton.setAttribute("src","https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles/icons8-cancel-80.png");
 closeButton.setAttribute("width","48");
 closeButton.setAttribute("height", "48");
 closeButton.setAttribute("alt", "CloseButton");
