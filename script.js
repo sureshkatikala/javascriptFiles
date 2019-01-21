@@ -24,7 +24,7 @@ autochatIcon.setAttribute("width","48");
 autochatIcon.setAttribute("height", "48");
 autochatIcon.setAttribute("alt", "Autochat Icon");
 autochatIconContainer.appendChild(autochatIcon);
-autochatIconContainer.onClick() = function(){
+autochatIconContainer.onClick = function(){
     var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "none";
     var autochatImageContainer = document.getElementById("autochat-image-container");
