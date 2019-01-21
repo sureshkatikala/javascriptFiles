@@ -30,7 +30,7 @@ autochatIconContainer.onClick = function(){
     var autochatImageContainer = document.getElementById("autochat-image-container");
     autochatImageContainer.style.display = "none";
 }
-autochatIconContainer.style = "bottom:20px;right:30px;position:fixed;z-index: 9999";
+autochatIconContainer.style = "bottom:110px;right:30px;position:fixed;z-index: 9999";
 
 
 
@@ -99,7 +99,7 @@ facebookDiv.setAttribute("class", "fb-customerchat");
 facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
 var my_awesome_script = document.createElement('script');
-my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@fa5e6b2/fbchatplugin.js');
+my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@8a3f309/fbchatplugin.js');
 //  window.fbAsyncInit = function() {
 //     FB.init({
 //       appId            : '1102875969894081',
