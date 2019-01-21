@@ -87,6 +87,7 @@ showOptionsContainer.appendChild(closeButton);
 // </div>
 autochatIcon.onClick = function(){
     var showOptionsContainer = document.getElementById("chat-widget-container");
+    debugger;
     showOptionsContainer.style.display = "block";
     var autochatImageContainer = document.getElementById("autochat-image-container");
     autochatImageContainer.style.display = "none";
