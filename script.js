@@ -85,14 +85,13 @@ showOptionsContainer.appendChild(closeButton);
 //  page_id="<ENTER-YOUR-FACEBOOK-ID-HERE>"
 //  minimized="true">
 // </div>
-autochatIcon.onClick = function(){
+autochatIcon.onclick = function(){
     var showOptionsContainer = document.getElementById("chat-widget-container");
-    debugger;
     showOptionsContainer.style.display = "block";
     var autochatImageContainer = document.getElementById("autochat-image-container");
     autochatImageContainer.style.display = "none";
 }
-closeButton.onClick =  function(){
+closeButton.onclick =  function(){
    var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "none";
     var autochatImageContainer = document.getElementById("autochat-image-container");
