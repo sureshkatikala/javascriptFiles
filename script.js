@@ -23,13 +23,13 @@ autochatIcon.setAttribute("src", "https://autochat.io/images/autochat-favicon/sv
 autochatIcon.setAttribute("width","48");
 autochatIcon.setAttribute("height", "48");
 autochatIcon.setAttribute("alt", "Autochat Icon");
-autochatIconContainer.appendChild(autochatIcon);
-autochatIconContainer.onClick = function(){
+autochatIcon.onClick = function(){
     var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "block";
     var autochatImageContainer = document.getElementById("autochat-image-container");
     autochatImageContainer.style.display = "none";
 }
+autochatIconContainer.appendChild(autochatIcon);
 autochatIconContainer.style = "bottom:110px;right:30px;position:fixed;z-index: 9999";
 
 
