@@ -64,6 +64,13 @@ whatsapp.onclick = function(){
 }
 showOptionsContainer.style = "bottom:30pt;right:30pt;position:fixed;z-index: 9999";
 
+var facebookDiv = document.createElement("div");
+facebookDiv.setAttribute("class", "fb-customerchat");
+facebookDiv.setAttribute("page_id", "829136050510375");
+facebookDiv.setAttribute("minimized","true");
+
+var my_awesome_script = document.createElement('script');
+my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@983a464/fbchatplugin.js');
 
 showOptionsContainer.appendChild(facebookDiv);
 showOptionsContainer.appendChild(my_awesome_script);
@@ -86,13 +93,6 @@ closeButton.onclick =  function(){
     var autochatImageContainer = document.getElementById("autochat-image-container");
     autochatImageContainer.style.display = "inline-grid";
 }
-var facebookDiv = document.createElement("div");
-facebookDiv.setAttribute("class", "fb-customerchat");
-facebookDiv.setAttribute("page_id", "829136050510375");
-facebookDiv.setAttribute("minimized","true");
-
-var my_awesome_script = document.createElement('script');
-my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@983a464/fbchatplugin.js');
 
 document.body.appendChild(autochatIconContainer)
 document.body.appendChild(showOptionsContainer);
