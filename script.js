@@ -1,20 +1,4 @@
 
-// var button = document.createElement("Button");
-// button.innerHTML = "Title";
-// button.style = "bottom:0;right:0;position:relative;z-index: 9999"
-// document.body.appendChild(button);
-// (function(d, s, id) {
-//   var js, fjs = d.getElementsByTagName(s)[0];
-//   if (d.getElementById(id)) return;
-//   js = d.createElement(s); js.id = id;
-//   js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-//   fjs.parentNode.insertBefore(js, fjs);
-// }(document, 'script', 'facebook-jssdk'));
-
-
-// var showOptionsContainer = document.createElement("div");
-// showOptionsContainer.setAttribute("id","chat-widget");
-
 var autochatIconContainer = document.createElement("div");
 autochatIconContainer.setAttribute("id","autochat-image-container")
 var autochatIcon = document.createElement("IMG");
@@ -25,21 +9,23 @@ autochatIcon.setAttribute("height", "48");
 autochatIcon.setAttribute("alt", "Autochat Icon");
 
 autochatIconContainer.appendChild(autochatIcon);
-autochatIconContainer.style = "bottom:110px;right:30px;position:fixed;z-index: 9999";
-
-
-
+autochatIconContainer.style = "bottom:30pt;right:30pt;position:fixed;z-index: 9999";
 
 var showOptionsContainer = document.createElement("div");
 showOptionsContainer.setAttribute("id","chat-widget-container");
 
+var closeButtonContainer = document.createElement("div");
+closeButtonContainer.setAttribute("id","close-button-container");
+
 var closeButton = document.createElement("IMG");
-closeButton.setAttribute("id", "close-button-div")
+closeButton.setAttribute("id", "close-button-image")
 closeButton.setAttribute("src","https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles/icons8-cancel-80.png");
 closeButton.setAttribute("width","48");
 closeButton.setAttribute("height", "48");
 closeButton.setAttribute("alt", "CloseButton");
 
+var whatsappContainer = document.createElement("div");
+whatsappContainer.setAttribute("id","whatsapp-button-container");
 
 var whatsapp = document.createElement("IMG");
 whatsapp.setAttribute("src", "https://image1.jdomni.in/jdomni_email/whatsapp_popup.png");
@@ -76,15 +62,18 @@ whatsapp.onclick = function(){
     window.open("https://web.whatsapp.com/send?phone=919490339525", "_blank");
   }
 }
-showOptionsContainer.style = "bottom:80px;right:30px;position:fixed;z-index: 9999";
-showOptionsContainer.appendChild(whatsapp);
-showOptionsContainer.appendChild(closeButton);
-//newDiv.appendChild(facebookImage)
+showOptionsContainer.style = "bottom:30pt;right:30pt;position:fixed;z-index: 9999";
 
-// <div class="fb-customerchat"
-//  page_id="<ENTER-YOUR-FACEBOOK-ID-HERE>"
-//  minimized="true">
-// </div>
+
+showOptionsContainer.appendChild(facebookDiv);
+showOptionsContainer.appendChild(my_awesome_script);
+showOptionsContainer.style.display = "none";
+
+whatsappContainer.appendChild(whatsapp);
+closeButtonContainer.appendChild(closeButton);
+showOptionsContainer.appendChild(whatsappContainer);
+showOptionsContainer.appendChild(closeButtonContainer);
+
 autochatIcon.onclick = function(){
     var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "inline-grid";
@@ -101,93 +90,13 @@ var facebookDiv = document.createElement("div");
 facebookDiv.setAttribute("class", "fb-customerchat");
 facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
+
 var my_awesome_script = document.createElement('script');
 my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@983a464/fbchatplugin.js');
-//  window.fbAsyncInit = function() {
-//     FB.init({
-//       appId            : '1102875969894081',
-//       autoLogAppEvents : true,
-//       xfbml            : true,
-//       version          : 'v2.11'
-//     });
-//   };
-// var js, fjs = document.getElementsByTagName("script")[0];
-// js = document.createElement("script");
-// js.setAttribute("id", "facebook-jssdk");
-// js.setAttribute("src", "https://connect.facebook.net/en_US/sdk.js");
-// fjs.parentNode.insertBefore(js, fjs);
-// (function(d, s, id){
-//      var js, fjs = d.getElementsByTagName(s)[0];
-//      if (d.getElementById(id)) {return;}
-//      js = d.createElement(s); js.id = id;
-//      js.src = "https://connect.facebook.net/en_US/sdk.js";
-//      fjs.parentNode.insertBefore(js, fjs);
-//    }(document, 'script', 'facebook-jssdk'));
 
-showOptionsContainer.appendChild(facebookDiv);
-showOptionsContainer.appendChild(my_awesome_script);
-showOptionsContainer.style.display = "none";
-document.body.appendChild(showOptionsContainer);
 document.body.appendChild(autochatIconContainer)
+document.body.appendChild(showOptionsContainer);
+
+//let facebookIcon = document.getElementsByClassName('fb_dialog  fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge fb_customer_chat_bubble_pop_in');
 
 
-/*
-var my_awesome_script = document.createElement('script');
-
-my_awesome_script.setAttribute('src','http://example.com/site.js');
-
-document.head.appendChild(my_awesome_script);
-
-*/
-// var facebookImage = document.createElement("IMG");
-// facebookImage.setAttribute("src", "https://cdn.pixabay.com/photo/2016/07/03/18/35/messenger-1495274_960_720.png");
-// facebookImage.setAttribute("width", "48");
-// facebookImage.setAttribute("height", "48");
-// facebookImage.setAttribute("alt", "Facebook icon");
-// facebookImage.onclick =
-      
-
-/*
-
-var facebookImage = document.createElement("IMG");
-facebookImage.setAttribute("src", "https://cdn.pixabay.com/photo/2016/07/03/18/35/messenger-1495274_960_720.png");
-facebookImage.setAttribute("width", "48");
-facebookImage.setAttribute("height", "48");
-facebookImage.setAttribute("alt", "Facebook icon");
-facebookImage.onclick = function(){
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '95100348886',
-          xfbml      : true,
-          version    : 'v2.6'
-        });
-      };
-      (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-
-//     <div class="fb-page" 
-//          data-href="https://www.facebook.com/XZY/" 
-//          data-tabs="messages" 
-//          data-width="400" 
-//          data-height="300" 
-//          data-small-header="true">
-//       <div class="fb-xfbml-parse-ignore">
-//         <blockquote></blockquote>
-//       </div>
-//     </div>
-    var fbPage = document.createElement("div");
-fbPage.setAttribute("class", "fb-page");
-fbPage.setAttribute("data-href", "https://www.facebook.com/whatshelpio/");
-fbPage.setAttribute("width", "400");
-fbPage.setAttribute("height", "300");
-fbPage.setAttribute("data-small-header", "true");
-fbPage.setAttribute("alt", "Facebook icon");
-newDiv.appendChild(fbpage);
-};
-
-*/
