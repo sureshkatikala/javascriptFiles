@@ -56,10 +56,10 @@ var isMobile = {
 
 whatsapp.onclick = function(){
   if( isMobile.any()) { 
-    window.open("https://wa.me/919490339525", "_blank");
+    window.open("https://wa.me/919494493639", "_blank");
   }
   else {
-    window.open("https://web.whatsapp.com/send?phone=919490339525", "_blank");
+    window.open("https://web.whatsapp.com/send?phone=919494493639", "_blank");
   }
 }
 showOptionsContainer.style = "bottom:30pt;right:30pt;position:fixed;z-index: 9999";
