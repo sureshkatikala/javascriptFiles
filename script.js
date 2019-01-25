@@ -102,9 +102,12 @@ closeButton.onclick =  function(){
 
 var divId = 'chat-widget-container';
 jQuery(divId).ready(function() {
-      var chatwidget = document.getElementById('chat-widget-container');
+    var otherDiv = 'fb';
+    jQuery(otherDiv).ready(function(){
+        var chatwidget = document.getElementById('chat-widget-container');
         var facebook = document.getElementById('fb');
         chatwidget.appendChild(facebook);
+    });
 });
 
 document.body.appendChild(autochatIconContainer)
