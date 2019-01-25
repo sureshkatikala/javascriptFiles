@@ -99,14 +99,10 @@ closeButton.onclick =  function(){
     var autochatImageContainer = document.getElementById("autochat-image-container");
     autochatImageContainer.style.display = "inline-grid";
 }
-var divId = "chat-widget-container";
-
-jQuery(divId).ready(function() {
-    var chatwidget = document.getElementById('chat-widget-container');
-    jQuery('fb').ready(function(){
+jQuery('fb').ready(function() {
+      var chatwidget = document.getElementById('chat-widget-container');
         var facebook = document.getElementById('fb');
         chatwidget.appendChild(facebook);
-    })
 });
 
 document.body.appendChild(autochatIconContainer)
