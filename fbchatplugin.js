@@ -5,15 +5,16 @@
        xfbml            : true,
        version          : 'v2.11'
      });
-   var fjs = document.getElementById("chat-widget-container");
+   
+ };
+var fjs = document.getElementById("chat-widget-container");
    var js = document.createElement("script");
    js.setAttribute("id", "facebook-jssdk");
    js.setAttribute("src", "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js");
    fjs.appendChild(js);
   if(fjs.style.display == "none"){
-    FB.CustomerChat.hide();
+   // FB.CustomerChat.hide();
   }
- };
 // FB.CustomerChat.hideDialog();
 
 //  (function(d, s, id){
