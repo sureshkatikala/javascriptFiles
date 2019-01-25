@@ -70,7 +70,7 @@ facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
 
 var my_awesome_script = document.createElement('script');
-my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@983a464/fbchatplugin.js');
+my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@f296408/fbchatplugin.js');
 
 showOptionsContainer.appendChild(facebookDiv);
 showOptionsContainer.appendChild(my_awesome_script);
