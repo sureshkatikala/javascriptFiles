@@ -86,7 +86,9 @@ closeButtonContainer.appendChild(closeButton);
 showOptionsContainer.appendChild(whatsappContainer);
 showOptionsContainer.appendChild(closeButtonContainer);
 
-autochatIcon.onclick = function(){
+autochatIcon.onmouseover = showOptions();
+autochatIcon.onclick = showOptions()
+    function showOptions(){
     var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "inline-grid";
     var autochatImageContainer = document.getElementById("autochat-image-container");
