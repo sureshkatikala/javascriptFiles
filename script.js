@@ -80,8 +80,9 @@ my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala
 showOptionsContainer.appendChild(facebookDiv);
 showOptionsContainer.appendChild(my_awesome_script);
 
+var chatwidget = document.getElementById('chat-widget-container');
 var customerchat = document.getElementsByClassName('fb-customerchat')[0];
-showOptionsContainer.appendChild(customerchat);
+chatwidget.appendChild(customerchat);
 showOptionsContainer.style.display = "none";
 
 whatsappContainer.appendChild(whatsapp);
