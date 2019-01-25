@@ -7,6 +7,7 @@ autochatIcon.setAttribute("src", "https://autochat.io/images/autochat-favicon/sv
 autochatIcon.setAttribute("width","48");
 autochatIcon.setAttribute("height", "48");
 autochatIcon.setAttribute("alt", "Autochat Icon");
+autochatIcon.style = 'cursor: pointer';
 
 autochatIconContainer.appendChild(autochatIcon);
 autochatIconContainer.style = "bottom:30pt;right:30pt;position:fixed;z-index: 9999";
@@ -23,6 +24,8 @@ closeButton.setAttribute("src","https://cdn.jsdelivr.net/gh/sureshkatikala/javas
 closeButton.setAttribute("width","48");
 closeButton.setAttribute("height", "48");
 closeButton.setAttribute("alt", "CloseButton");
+closeButton.style = 'cursor: pointer';
+
 
 var whatsappContainer = document.createElement("div");
 whatsappContainer.setAttribute("id","whatsapp-button-container");
@@ -32,6 +35,8 @@ whatsapp.setAttribute("src", "https://image1.jdomni.in/jdomni_email/whatsapp_pop
 whatsapp.setAttribute("width", "48");
 whatsapp.setAttribute("height", "48");
 whatsapp.setAttribute("alt", "whatsapp icon");
+whatsapp.style = 'cursor: pointer';
+
 
 var isMobile = {
     Android: function() {
