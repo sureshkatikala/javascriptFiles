@@ -99,7 +99,9 @@ closeButton.onclick =  function(){
     var autochatImageContainer = document.getElementById("autochat-image-container");
     autochatImageContainer.style.display = "inline-grid";
 }
-jQuery('fb').ready(function() {
+
+var divId = 'chat-widget-container';
+jQuery(divId).ready(function() {
       var chatwidget = document.getElementById('chat-widget-container');
         var facebook = document.getElementById('fb');
         chatwidget.appendChild(facebook);
