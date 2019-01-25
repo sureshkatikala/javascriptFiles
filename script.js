@@ -71,6 +71,7 @@ showOptionsContainer.style = "bottom:30pt;right:30pt;position:fixed;z-index: 999
 
 var facebookDiv = document.createElement("div");
 facebookDiv.setAttribute("class", "fb-customerchat");
+facebookDiv.setAttribute("id",'fb')
 facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
 
@@ -98,6 +99,15 @@ closeButton.onclick =  function(){
     var autochatImageContainer = document.getElementById("autochat-image-container");
     autochatImageContainer.style.display = "inline-grid";
 }
+var divId = "chat-widget-container";
+
+jQuery(divId).ready(function() {
+    var chatwidget = document.getElementById('chat-widget-container');
+    jQuery('fb').ready(function(){
+        var facebook = document.getElementById('fb');
+        chatwidget.appendChild(facebook);
+    })
+});
 
 document.body.appendChild(autochatIconContainer)
 document.body.appendChild(showOptionsContainer);
