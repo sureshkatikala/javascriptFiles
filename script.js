@@ -136,8 +136,6 @@ closeButton.onclick =  function(){
 //     window.FB.CustomerChat.hide();
 var fjs = document.getElementById("chat-widget-container");
 
-  }
-
 // var divId = 'chat-widget-container';
 // jQuery(divId).ready(function() {
 //     var otherDiv = 'fb';
