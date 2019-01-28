@@ -54,11 +54,10 @@ var facebookIcon = document.createElement('IMG');
 facebookIcon.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles/icons8-facebook-messenger-filled-100.png');
 facebookIcon.setAttribute("width", "48");
 facebookIcon.setAttribute("height", "48");
-facebookIcon.setAttribute("alt", "whatsapp icon");
+facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
 facebookIcon.onclick = function(){
- console.log("fb Inside : " + FB.stringify());
-     FB.CustomerChat.showDialog();
+ FB.CustomerChat.show(shouldShowDialog: true);
 }
 
 var isMobile = {
