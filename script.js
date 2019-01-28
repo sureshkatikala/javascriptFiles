@@ -7,9 +7,11 @@
        xfbml            : true,
        version          : 'v2.11'
      });
-   
+    $(document).trigger('fbload'); 
  };
-
+$(document).on(
+    'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
+    function(){
 var autochatIconContainer = document.createElement("div");
 autochatIconContainer.setAttribute("id","autochat-image-container")
 var autochatIcon = document.createElement("IMG");
@@ -151,7 +153,7 @@ var fjs = document.getElementById("chat-widget-container");
 
 document.body.appendChild(autochatIconContainer)
 document.body.appendChild(showOptionsContainer);
-
+    }
 //let facebookIcon = document.getElementsByClassName('fb_dialog  fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge fb_customer_chat_bubble_pop_in');
 
 
