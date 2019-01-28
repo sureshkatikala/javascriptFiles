@@ -49,13 +49,13 @@ whatsapp.setAttribute("alt", "whatsapp icon");
 whatsapp.style = 'cursor: pointer';
 
 var facebookIcon = document.createElement('IMG');
-facebookIcon.setAttribute('src','https://www.clipartmax.com/middle/m2i8Z5H7A0b1Z5H7_50-facebook-icons-vector-free-download-facebook-messenger-logo-icon/');
+facebookIcon.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles/icons8-facebook-messenger-filled-100.png');
 facebookIcon.setAttribute("width", "48");
 facebookIcon.setAttribute("height", "48");
 facebookIcon.setAttribute("alt", "whatsapp icon");
 facebookIcon.style = 'cursor: pointer';
 facebookIcon.onclick = function(){
-//     window.FB.CustomerChat.showDialog();
+     FB.CustomerChat.showDialog();
 }
 
 var isMobile = {
@@ -134,6 +134,9 @@ closeButton.onclick =  function(){
    showOptionsContainer.appendChild(js);
 //   if(fjs.style.display == "none"){
 //     window.FB.CustomerChat.hide();
+if(showOptionsContainer.style.display == 'none'){
+ FB.CustomerChat.hide();
+}
 var fjs = document.getElementById("chat-widget-container");
 
 // var divId = 'chat-widget-container';
