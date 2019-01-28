@@ -153,7 +153,7 @@ var fjs = document.getElementById("chat-widget-container");
 
 document.body.appendChild(autochatIconContainer)
 document.body.appendChild(showOptionsContainer);
-    }
+    })
 //let facebookIcon = document.getElementsByClassName('fb_dialog  fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge fb_customer_chat_bubble_pop_in');
 
 
