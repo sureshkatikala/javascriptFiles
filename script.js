@@ -131,10 +131,13 @@ closeButton.onclick =  function(){
 //       js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
 //       fjs.parentNode.insertBefore(js, fjs);
 //     }(document, 'script', 'facebook-jssdk'));
+   var fjs  = document.getElementsByTagName('script')[0];
    var js = document.createElement("script");
+   if (document.getElementById("facebook-jssdk")) {return;}
    js.setAttribute("id", "facebook-jssdk");
    js.setAttribute("src", "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js");
-   showOptionsContainer.appendChild(js);
+   fjs.appendChild(js);
+     //showOptionsContainer.appendChild(js);
 //   if(fjs.style.display == "none"){
 //     window.FB.CustomerChat.hide();
 // if(showOptionsContainer.style.display == 'none'){
