@@ -58,7 +58,8 @@ facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
 facebookIcon.onclick = function(){
 //  FB.CustomerChat.show(shouldShowDialog: true);
- FB.CustomerChat.showDialog();
+ var FBChat = FB.json();
+ FBChat.CustomerChat.showDialog();
 }
 
 var isMobile = {
