@@ -1,4 +1,15 @@
 
+
+ window.fbAsyncInit = function() {
+     FB.init({
+       appId            : '1102875969894081',
+       autoLogAppEvents : true,
+       xfbml            : true,
+       version          : 'v2.11'
+     });
+   
+ };
+
 var autochatIconContainer = document.createElement("div");
 autochatIconContainer.setAttribute("id","autochat-image-container")
 var autochatIcon = document.createElement("IMG");
@@ -37,6 +48,15 @@ whatsapp.setAttribute("height", "48");
 whatsapp.setAttribute("alt", "whatsapp icon");
 whatsapp.style = 'cursor: pointer';
 
+var facebookIcon = document.createElement('IMG');
+facebookIcon.setAttribute('src','https://www.clipartmax.com/middle/m2i8Z5H7A0b1Z5H7_50-facebook-icons-vector-free-download-facebook-messenger-logo-icon/');
+facebookIcon.setAttribute("width", "48");
+facebookIcon.setAttribute("height", "48");
+facebookIcon.setAttribute("alt", "whatsapp icon");
+facebookIcon.style = 'cursor: pointer';
+facebookIcon.onclick = function(){
+    window.FB.CustomerChat.showDialog();
+}
 
 var isMobile = {
     Android: function() {
@@ -75,11 +95,12 @@ facebookDiv.setAttribute("id",'fb')
 facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
 
-var my_awesome_script = document.createElement('script');
-my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@cce8ce7/fbchatplugin.js');
+// var my_awesome_script = document.createElement('script');
+// my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@cce8ce7/fbchatplugin.js');
 
 showOptionsContainer.appendChild(facebookDiv);
-showOptionsContainer.appendChild(my_awesome_script);
+showOptionsContainer.appendChild(facebookIcon)
+// showOptionsContainer.appendChild(my_awesome_script);
 showOptionsContainer.style.display = "none";
 
 whatsappContainer.appendChild(whatsapp);
@@ -87,7 +108,7 @@ closeButtonContainer.appendChild(closeButton);
 showOptionsContainer.appendChild(whatsappContainer);
 showOptionsContainer.appendChild(closeButtonContainer);
 
-autochatIcon.onmouseenter = autochatIcon.onclick = function(){
+autochatIcon.onclick = function(){
     var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "inline-grid";
     var autochatImageContainer = document.getElementById("autochat-image-container");
@@ -99,6 +120,16 @@ closeButton.onclick =  function(){
     var autochatImageContainer = document.getElementById("autochat-image-container");
     autochatImageContainer.style.display = "inline-grid";
 }
+
+   var js = document.createElement("script");
+   js.setAttribute("id", "facebook-jssdk");
+   js.setAttribute("src", "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js");
+   showOptionsContainer.appendChild(js);
+//   if(fjs.style.display == "none"){
+    window.FB.CustomerChat.hide();
+// var fjs = document.getElementById("chat-widget-container");
+
+//   }
 
 // var divId = 'chat-widget-container';
 // jQuery(divId).ready(function() {
