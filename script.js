@@ -136,9 +136,9 @@ closeButton.onclick =  function(){
    showOptionsContainer.appendChild(js);
 //   if(fjs.style.display == "none"){
 //     window.FB.CustomerChat.hide();
-if(showOptionsContainer.style.display == 'none'){
+// if(showOptionsContainer.style.display == 'none'){
  FB.CustomerChat.hide();
-}
+// }
 var fjs = document.getElementById("chat-widget-container");
 
 // var divId = 'chat-widget-container';
