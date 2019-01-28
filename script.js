@@ -57,7 +57,7 @@ facebookIcon.setAttribute("height", "48");
 facebookIcon.setAttribute("alt", "whatsapp icon");
 facebookIcon.style = 'cursor: pointer';
 facebookIcon.onclick = function(){
- console.log("fb Inside : " + FB);
+ console.log("fb Inside : " + FB.stringify());
      FB.CustomerChat.showDialog();
 }
 
