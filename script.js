@@ -1,6 +1,6 @@
 
 
- window.fbAsyncInit = function() {
+ window.fbAsyncInit = (()=> {
      FB.init({
        appId            : '1102875969894081',
        autoLogAppEvents : true,
@@ -8,7 +8,7 @@
        version          : 'v2.11'
      });
     $(document).trigger('fbload'); 
- };
+ })();
 $(document).on(
     'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
     function(){
