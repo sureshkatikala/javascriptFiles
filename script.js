@@ -12,6 +12,7 @@
 $(document).on(
     'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
     function(){
+     
 var autochatIconContainer = document.createElement("div");
 autochatIconContainer.setAttribute("id","autochat-image-container")
 var autochatIcon = document.createElement("IMG");
@@ -49,18 +50,18 @@ whatsapp.setAttribute("width", "48");
 whatsapp.setAttribute("height", "48");
 whatsapp.setAttribute("alt", "whatsapp icon");
 whatsapp.style = 'cursor: pointer';
-
-var facebookIcon = document.createElement('IMG');
-facebookIcon.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles/icons8-facebook-messenger-filled-100.png');
-facebookIcon.setAttribute("width", "48");
-facebookIcon.setAttribute("height", "48");
-facebookIcon.setAttribute("alt", "messenger icon");
-facebookIcon.style = 'cursor: pointer';
-facebookIcon.onclick = function(){
- FB.CustomerChat.show(true);
-//  var FBChat = FB.json();
-//  FBChat.CustomerChat.showDialog();
-}
+  FB.XFBML.parse(document.getElementById('chat-widget-container'));
+// var facebookIcon = document.createElement('IMG');
+// facebookIcon.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles/icons8-facebook-messenger-filled-100.png');
+// facebookIcon.setAttribute("width", "48");
+// facebookIcon.setAttribute("height", "48");
+// facebookIcon.setAttribute("alt", "messenger icon");
+// facebookIcon.style = 'cursor: pointer';
+// facebookIcon.onclick = function(){
+//  FB.CustomerChat.show(true);
+// //  var FBChat = FB.json();
+// //  FBChat.CustomerChat.showDialog();
+// }
 
 var isMobile = {
     Android: function() {
@@ -103,7 +104,7 @@ facebookDiv.setAttribute("minimized","true");
 // my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@cce8ce7/fbchatplugin.js');
 
 showOptionsContainer.appendChild(facebookDiv);
-showOptionsContainer.appendChild(facebookIcon)
+// showOptionsContainer.appendChild(facebookIcon)
 // showOptionsContainer.appendChild(my_awesome_script);
 showOptionsContainer.style.display = "none";
 
