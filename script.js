@@ -50,7 +50,9 @@ whatsapp.setAttribute("width", "48");
 whatsapp.setAttribute("height", "48");
 whatsapp.setAttribute("alt", "whatsapp icon");
 whatsapp.style = 'cursor: pointer';
-  FB.XFBML.parse(document.getElementById('chat-widget-container'));
+     FB.Event.subscribe('customerchat.load', ()=>{
+       FB.XFBML.parse(document.getElementById('chat-widget-container'));
+});
 // var facebookIcon = document.createElement('IMG');
 // facebookIcon.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles/icons8-facebook-messenger-filled-100.png');
 // facebookIcon.setAttribute("width", "48");
