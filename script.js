@@ -7,6 +7,13 @@
      });
     $(document).trigger('fbload'); 
  };
+(function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'))
 // $(document).on(
 //     'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
 //     function(){
@@ -68,20 +75,20 @@ facebookIcon.setAttribute("width", "48");
 facebookIcon.setAttribute("height", "48");
 facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
-facebookIcon.onclick = function(){
-  $(document).on(
-    'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
-    function(){
-     FB.Event.subscribe('xfbml.render', 
-        (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk')))
-//     $(document).trigger('fbload'); 
- })};
+// facebookIcon.onclick = function(){
+//   $(document).on(
+//     'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
+//     function(){
+//      FB.Event.subscribe('xfbml.render', 
+//         (function(d, s, id){
+//         var js, fjs = d.getElementsByTagName(s)[0];
+//         if (d.getElementById(id)) {return;}
+//         js = d.createElement(s); js.id = id;
+//         js.src = "https://connect.facebook.net/en_US/sdk.js";
+//         fjs.parentNode.insertBefore(js, fjs);
+//         }(document, 'script', 'facebook-jssdk')))
+// //     $(document).trigger('fbload'); 
+//  })};
     
 //    var fjs  = document.getElementsByTagName('script')[0];
 //    var js = document.createElement("script");
