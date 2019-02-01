@@ -76,8 +76,7 @@ facebookIcon.onclick = function(){
        xfbml            : false,
        version          : 'v2.11'
      });
-        FB.Event.subscribe('xfbml.render', 
-
+     FB.Event.subscribe('xfbml.render', 
         (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
@@ -86,7 +85,7 @@ facebookIcon.onclick = function(){
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk')))
 //     $(document).trigger('fbload'); 
- });
+ })};
     
 //    var fjs  = document.getElementsByTagName('script')[0];
 //    var js = document.createElement("script");
