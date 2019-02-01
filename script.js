@@ -1,12 +1,12 @@
-// window.fbAsyncInit = (()=> {
-//      FB.init({
-//        appId            : '1102875969894081',
-//        autoLogAppEvents : true,
-//        xfbml            : true,
-//        version          : 'v2.11'
-//      });
-//     $(document).trigger('fbload'); 
-//  })();
+window.fbAsyncInit = (()=> {
+     FB.init({
+       appId            : '1102875969894081',
+       autoLogAppEvents : true,
+       xfbml            : true,
+       version          : 'v2.11'
+     });
+    $(document).trigger('fbload'); 
+ })();
 // $(document).on(
 //     'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
 //     function(){
@@ -69,13 +69,9 @@ facebookIcon.setAttribute("height", "48");
 facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
 facebookIcon.onclick = function(){
-  window.fbAsyncInit = (()=> {
-     FB.init({
-       appId            : '1102875969894081',
-       autoLogAppEvents : true,
-       xfbml            : false,
-       version          : 'v2.11'
-     });
+  $(document).on(
+    'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
+    function(){
      FB.Event.subscribe('xfbml.render', 
         (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
