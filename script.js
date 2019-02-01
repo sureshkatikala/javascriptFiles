@@ -5,15 +5,15 @@
        xfbml            : true,
        version          : 'v2.11'
      });
-    $(document).trigger('fbload'); 
+//     $(document).trigger('fbload'); 
  };
-(function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'))
+// (function(d, s, id){
+//         var js, fjs = d.getElementsByTagName(s)[0];
+//         if (d.getElementById(id)) {return;}
+//         js = d.createElement(s); js.id = id;
+//         js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+//         fjs.parentNode.insertBefore(js, fjs);
+//         }(document, 'script', 'facebook-jssdk'))
 // $(document).on(
 //     'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
 //     function(){
@@ -75,11 +75,14 @@ facebookIcon.setAttribute("width", "48");
 facebookIcon.setAttribute("height", "48");
 facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
-// facebookIcon.onclick = function(){
-//   $(document).on(
-//     'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
-//     function(){
-//      FB.Event.subscribe('xfbml.render', 
+facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk')
+function showFbChat(d,s,id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+}
 //         (function(d, s, id){
 //         var js, fjs = d.getElementsByTagName(s)[0];
 //         if (d.getElementById(id)) {return;}
