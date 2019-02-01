@@ -86,7 +86,7 @@ facebookIcon.onclick = function(){
         js = d.createElement(s); js.id = id;
         js.src = "https://connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+        }(document, 'script', 'facebook-jssdk'))
 //    var fjs  = document.getElementsByTagName('script')[0];
 //    var js = document.createElement("script");
 // //    if (document.getElementById("facebook-jssdk")) {return;}
@@ -103,7 +103,7 @@ facebookIcon.onclick = function(){
  // FB.CustomerChat.show(true);
 //  var FBChat = FB.json();
 //  FBChat.CustomerChat.showDialog();
-});
+)};
 
 var isMobile = {
     Android: function() {
