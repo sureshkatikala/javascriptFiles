@@ -65,8 +65,8 @@ facebookIcon.onclick = function(){
        xfbml            : false,
        version          : 'v2.11'
      });
-    $(document).trigger('fbload'); 
- })();
+//     $(document).trigger('fbload'); 
+ });
  
    var fjs  = document.getElementsByTagName('script')[0];
    var js = document.createElement("script");
@@ -74,7 +74,7 @@ facebookIcon.onclick = function(){
    js.setAttribute("id", "facebook-jssdk");
    js.setAttribute("src", "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js");
    fjs.appendChild(js);
-    FB.CustomerChat.show(true);
+   FB.CustomerChat.show(true);
 
 
  // FB.CustomerChat.show(true);
