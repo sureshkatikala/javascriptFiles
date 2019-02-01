@@ -51,6 +51,17 @@ whatsapp.style = 'cursor: pointer';
 //      FB.Event.subscribe('customerchat.load', ()=>{
 //        FB.XFBML.parse(document.getElementById('chat-widget-container'));
 // });
+var facebookDiv = document.createElement("div");
+facebookDiv.setAttribute("class", "fb-customerchat");
+facebookDiv.setAttribute("id",'fb')
+facebookDiv.setAttribute("page_id", "829136050510375");
+facebookDiv.setAttribute("minimized","true");
+
+// var my_awesome_script = document.createElement('script');
+// my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@cce8ce7/fbchatplugin.js');
+
+showOptionsContainer.appendChild(facebookDiv);
+
 var facebookIcon = document.createElement('IMG');
 facebookIcon.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles/icons8-facebook-messenger-filled-100.png');
 facebookIcon.setAttribute("width", "48");
@@ -123,16 +134,7 @@ whatsapp.onclick = function(){
 }
 showOptionsContainer.style = "bottom:30pt;right:30pt;position:fixed;z-index: 9999";
 
-var facebookDiv = document.createElement("div");
-facebookDiv.setAttribute("class", "fb-customerchat");
-facebookDiv.setAttribute("id",'fb')
-facebookDiv.setAttribute("page_id", "829136050510375");
-facebookDiv.setAttribute("minimized","true");
 
-// var my_awesome_script = document.createElement('script');
-// my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@cce8ce7/fbchatplugin.js');
-
-showOptionsContainer.appendChild(facebookDiv);
 showOptionsContainer.appendChild(facebookIcon)
 // showOptionsContainer.appendChild(my_awesome_script);
 showOptionsContainer.style.display = "none";
