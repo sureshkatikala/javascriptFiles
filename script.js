@@ -67,18 +67,24 @@ facebookIcon.onclick = function(){
      });
 //     $(document).trigger('fbload'); 
  });
- 
-   var fjs  = document.getElementsByTagName('script')[0];
-   var js = document.createElement("script");
-//    if (document.getElementById("facebook-jssdk")) {return;}
-   js.setAttribute("id", "facebook-jssdk");
-   js.setAttribute("src", "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js");
-   fjs.appendChild(js);
-//    FB.CustomerChat.show(true);
-    FB.Event.subscribe('customerchat.load', ()=>{
-//        FB.XFBML.parse(document.getElementById('chat-widget-container'));
-         FB.CustomerChat.show(true);
-     });
+        (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+//    var fjs  = document.getElementsByTagName('script')[0];
+//    var js = document.createElement("script");
+// //    if (document.getElementById("facebook-jssdk")) {return;}
+//    js.setAttribute("id", "facebook-jssdk");
+//    js.setAttribute("src", "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js");
+//    fjs.appendChild(js);
+// //    FB.CustomerChat.show(true);
+//     FB.Event.subscribe('customerchat.load', ()=>{
+// //        FB.XFBML.parse(document.getElementById('chat-widget-container'));
+//          FB.CustomerChat.show(true);
+//      });
 
 
  // FB.CustomerChat.show(true);
