@@ -2,7 +2,7 @@
      FB.init({
        appId            : '1102875969894081',
        autoLogAppEvents : true,
-       xfbml            : true,
+       xfbml            : false,
        version          : 'v2.11'
      });
 //     $(document).trigger('fbload'); 
@@ -75,8 +75,9 @@ facebookIcon.setAttribute("width", "48");
 facebookIcon.setAttribute("height", "48");
 facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
-facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk')
+facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
 function showFbChat(d,s,id){
+   FB.XFBML.parse();
          var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
         js = d.createElement(s); js.id = id;
