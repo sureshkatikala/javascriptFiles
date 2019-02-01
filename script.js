@@ -70,7 +70,7 @@ facebookIcon.onclick = function(){
  
    var fjs  = document.getElementsByTagName('script')[0];
    var js = document.createElement("script");
-   if (document.getElementById("facebook-jssdk")) {return;}
+//    if (document.getElementById("facebook-jssdk")) {return;}
    js.setAttribute("id", "facebook-jssdk");
    js.setAttribute("src", "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js");
    fjs.appendChild(js);
