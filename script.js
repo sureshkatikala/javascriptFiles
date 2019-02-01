@@ -123,7 +123,7 @@ facebookDiv.setAttribute("minimized","true");
 // my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@cce8ce7/fbchatplugin.js');
 
 showOptionsContainer.appendChild(facebookDiv);
-// showOptionsContainer.appendChild(facebookIcon)
+showOptionsContainer.appendChild(facebookIcon)
 // showOptionsContainer.appendChild(my_awesome_script);
 showOptionsContainer.style.display = "none";
 
