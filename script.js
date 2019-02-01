@@ -7,9 +7,9 @@
 //      });
 //     $(document).trigger('fbload'); 
 //  })();
-$(document).on(
-    'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
-    function(){
+// $(document).on(
+//     'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
+//     function(){
      
 var autochatIconContainer = document.createElement("div");
 autochatIconContainer.setAttribute("id","autochat-image-container")
@@ -178,7 +178,7 @@ closeButton.onclick =  function(){
 
 document.body.appendChild(autochatIconContainer)
 document.body.appendChild(showOptionsContainer);
-    }())
+//     }())
 //let facebookIcon = document.getElementsByClassName('fb_dialog  fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge fb_customer_chat_bubble_pop_in');
 
 
