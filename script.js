@@ -66,7 +66,7 @@ facebookIcon.onclick = function(){
        version          : 'v2.11'
      });
 //     $(document).trigger('fbload'); 
- });
+ }());
         (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
