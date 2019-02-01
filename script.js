@@ -74,7 +74,11 @@ facebookIcon.onclick = function(){
    js.setAttribute("id", "facebook-jssdk");
    js.setAttribute("src", "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js");
    fjs.appendChild(js);
-   FB.CustomerChat.show(true);
+//    FB.CustomerChat.show(true);
+    FB.Event.subscribe('customerchat.load', ()=>{
+//        FB.XFBML.parse(document.getElementById('chat-widget-container'));
+         FB.CustomerChat.show(true);
+     });
 
 
  // FB.CustomerChat.show(true);
