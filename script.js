@@ -76,9 +76,7 @@ facebookIcon.onclick = function(){
        xfbml            : false,
        version          : 'v2.11'
      });
-//     $(document).trigger('fbload'); 
- });
-     FB.Event.subscribe('xfbml.render', 
+        FB.Event.subscribe('xfbml.render', 
 
         (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -86,7 +84,10 @@ facebookIcon.onclick = function(){
         js = d.createElement(s); js.id = id;
         js.src = "https://connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'))
+        }(document, 'script', 'facebook-jssdk')))
+//     $(document).trigger('fbload'); 
+ });
+    
 //    var fjs  = document.getElementsByTagName('script')[0];
 //    var js = document.createElement("script");
 // //    if (document.getElementById("facebook-jssdk")) {return;}
@@ -103,7 +104,7 @@ facebookIcon.onclick = function(){
  // FB.CustomerChat.show(true);
 //  var FBChat = FB.json();
 //  FBChat.CustomerChat.showDialog();
-)};
+// )};
 
 var isMobile = {
     Android: function() {
