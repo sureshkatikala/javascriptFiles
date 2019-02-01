@@ -2,7 +2,7 @@
      FB.init({
        appId            : '1102875969894081',
        autoLogAppEvents : true,
-       xfbml            : false,
+       xfbml            : true,
        version          : 'v2.11'
      });
     $(document).trigger('fbload'); 
