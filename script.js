@@ -78,6 +78,8 @@ facebookIcon.onclick = function(){
      });
 //     $(document).trigger('fbload'); 
  });
+     FB.Event.subscribe('xfbml.render', 
+
         (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
@@ -101,7 +103,7 @@ facebookIcon.onclick = function(){
  // FB.CustomerChat.show(true);
 //  var FBChat = FB.json();
 //  FBChat.CustomerChat.showDialog();
-}
+});
 
 var isMobile = {
     Android: function() {
