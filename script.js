@@ -1,12 +1,12 @@
-window.fbAsyncInit = (()=> {
+ window.fbAsyncInit = function() {
      FB.init({
        appId            : '1102875969894081',
        autoLogAppEvents : true,
-       xfbml            : true,
+       xfbml            : false,
        version          : 'v2.11'
      });
     $(document).trigger('fbload'); 
- })();
+ };
 // $(document).on(
 //     'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
 //     function(){
