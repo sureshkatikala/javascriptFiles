@@ -75,7 +75,7 @@ facebookIcon.setAttribute("width", "48");
 facebookIcon.setAttribute("height", "48");
 facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
-facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
+// facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
 // function showFbChat(d,s,id){
 //    FB.XFBML.parse();
 //          var js, fjs = d.getElementsByTagName(s)[0];
