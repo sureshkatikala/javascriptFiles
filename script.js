@@ -65,6 +65,10 @@ facebookDiv.setAttribute("id",'fb')
 facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
 
+
+let facebookIcon = document.getElementsByClassName('fb_dialog  fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge fb_customer_chat_bubble_pop_in')[0];
+facebookIcon.setAttribute('bottom', '115pt');
+facebookIcon.setAttribute('right', '25pt');
 // var my_awesome_script = document.createElement('script');
 // my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@cce8ce7/fbchatplugin.js');
 
