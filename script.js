@@ -60,7 +60,7 @@ whatsapp.style = 'cursor: pointer';
 //        FB.XFBML.parse(document.getElementById('chat-widget-container'));
 // });
 var facebookDiv = document.createElement("div");
-//facebookDiv.setAttribute("class", "fb-customerchat");
+facebookDiv.setAttribute("class", "fb-customerchat");
 facebookDiv.setAttribute("id",'fb-root')
 facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
