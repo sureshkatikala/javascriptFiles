@@ -65,10 +65,17 @@ facebookDiv.setAttribute("id",'fb')
 facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
 
+let myVar = setInterval(myTimer, 1000);
 
+function myTimer() {
 let facebookIconDisplayStyling = document.getElementsByClassName('fb_dialog  fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge fb_customer_chat_bubble_pop_in')[0];
-facebookIconDisplayStyling.setAttribute('bottom', '115pt');
-facebookIconDisplayStyling.setAttribute('right', '25pt');
+if(facebookIconDisplayStyling !== undefined) {
+  facebookIconDisplayStyling.setAttribute('bottom', '115pt');
+  facebookIconDisplayStyling.setAttribute('right', '25pt');
+  clearInterval(myVar);
+ }
+}
+
 // var my_awesome_script = document.createElement('script');
 // my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@cce8ce7/fbchatplugin.js');
 
