@@ -71,8 +71,8 @@ function myTimer() {
 let facebookIconDisplayStyling = document.getElementsByClassName('fb_dialog');
  console.log('inside', facebookIconDisplayStyling)
 if(facebookIconDisplayStyling.length !== 0) {
-  facebookIconDisplayStyling.setAttribute('bottom', '115pt !important');
-  facebookIconDisplayStyling.setAttribute('right', '25pt !important');
+  facebookIconDisplayStyling[0].style = 'bottom : 115pt !important';
+  facebookIconDisplayStyling[0].style = 'right : 25pt !important';
   clearInterval(myVar);
  }
 }
