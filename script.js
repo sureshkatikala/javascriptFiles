@@ -70,8 +70,8 @@ let myVar = setInterval(myTimer, 1000);
 function myTimer() {
 let facebookIconDisplayStyling = document.getElementsByClassName('fb_dialog  fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge fb_customer_chat_bubble_pop_in')[0];
 if(facebookIconDisplayStyling !== undefined) {
-  facebookIconDisplayStyling.setAttribute('bottom', '115pt');
-  facebookIconDisplayStyling.setAttribute('right', '25pt');
+  facebookIconDisplayStyling.setAttribute('bottom', '115pt !important');
+  facebookIconDisplayStyling.setAttribute('right', '25pt !important');
   clearInterval(myVar);
  }
 }
