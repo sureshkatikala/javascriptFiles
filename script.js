@@ -68,12 +68,12 @@ facebookDiv.setAttribute("minimized","true");
 let myVar = setInterval(myTimer, 1000);
 
 function myTimer() {
-let facebookIconDisplayStyling = document.getElementsByClassName('fb_dialog')[0];
-if(facebookIconDisplayStyling !== undefined) {
+let facebookIconDisplayStyling = document.getElementsByClassName('fb_dialog');
+ console.log('inside', facebookIconDisplayStyling)
+if(facebookIconDisplayStyling.length !== 0) {
   facebookIconDisplayStyling.setAttribute('bottom', '115pt !important');
   facebookIconDisplayStyling.setAttribute('right', '25pt !important');
   clearInterval(myVar);
- console.log('inside if')
  }
 }
 
