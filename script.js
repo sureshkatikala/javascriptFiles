@@ -101,6 +101,7 @@ facebookIcon.setAttribute("height", "48");
 facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
 facebookIcon.onclick = function() {
+ FB.XFBML.parse();
  FB.CustomerChat.showDialog();
 }
 // facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
@@ -182,8 +183,9 @@ showOptionsContainer.appendChild(whatsappContainer);
 showOptionsContainer.appendChild(closeButtonContainer);
 
 autochatIcon.onclick = function(){
-   FB.XFBML.parse();
-   FB.CustomerChat.hide();
+//    FB.XFBML.parse();
+//    FB.CustomerChat.hide();
+ 
     var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "inline-grid";
     var autochatImageContainer = document.getElementById("autochat-image-container");
