@@ -5,11 +5,11 @@
        xfbml            : false,
        version          : 'v2.11'
      });
-//   FB.Event.subscribe('customerchat.load', function(){
-//    FB.CustomerChat.hide();
+  FB.Event.subscribe('customerchat.load', function(){
+   FB.CustomerChat.showDialog();
    
    
-//   });
+  });
 
   FB.Event.subscribe('customerchat.dialogHide', function(){
    FB.CustomerChat.hide();
