@@ -105,6 +105,7 @@ facebookIcon.onclick = function() {
 //  FB.XFBML.parse();
  if(flag){
   FB.XFBML.parse();
+   FB.CustomerChat.showDialog();
   flag = false;
  }
  FB.CustomerChat.showDialog();
