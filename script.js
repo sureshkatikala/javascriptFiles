@@ -2,11 +2,13 @@
      FB.init({
        appId            : '1102875969894081',
        autoLogAppEvents : true,
-       xfbml            : true,
+       xfbml            : false,
        version          : 'v2.11'
      });
   FB.Event.subscribe('customerchat.load', function(){
    FB.CustomerChat.hide();
+   
+   
   });
 
   FB.Event.subscribe('customerchat.dialogHide', function(){
@@ -180,6 +182,7 @@ showOptionsContainer.appendChild(whatsappContainer);
 showOptionsContainer.appendChild(closeButtonContainer);
 
 autochatIcon.onclick = function(){
+   FB.XFBML.parse();
    FB.CustomerChat.hide();
     var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "inline-grid";
