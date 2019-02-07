@@ -40,7 +40,7 @@ autochatIcon.setAttribute("alt", "Autochat Icon");
 autochatIcon.style = 'cursor: pointer';
 
 autochatIconContainer.appendChild(autochatIcon);
-autochatIconContainer.style = "bottom:30pt;right:30pt;position:fixed;z-index: 9999";
+autochatIconContainer.style = "bottom:18pt;right:18pt;position:fixed;z-index: 9999";
 
 var showOptionsContainer = document.createElement("div");
 showOptionsContainer.setAttribute("id","chat-widget-container");
@@ -75,16 +75,16 @@ facebookDiv.setAttribute("id",'fb')
 facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
 
-let myVar = setInterval(myTimer, 1000);
+// let myVar = setInterval(myTimer, 1000);
 
-function myTimer() {
-let facebookIconDisplayStyling = document.getElementsByClassName('fb_dialog');
-console.log('inside', facebookIconDisplayStyling)
-if(facebookIconDisplayStyling.length !== 0) {
-  facebookIconDisplayStyling[0].style = 'background: none;border-radius: 50%;bottom: 26pt !important;display: inline;height: 45pt;padding: 0px;position: fixed;right: 24pt !important;top: auto;width: 45pt;z-index: 9999;';
-  clearInterval(myVar);
- }
-}
+// function myTimer() {
+// let facebookIconDisplayStyling = document.getElementsByClassName('fb_dialog');
+// console.log('inside', facebookIconDisplayStyling)
+// if(facebookIconDisplayStyling.length !== 0) {
+//   facebookIconDisplayStyling[0].style = 'background: none;border-radius: 50%;bottom: 26pt !important;display: inline;height: 45pt;padding: 0px;position: fixed;right: 24pt !important;top: auto;width: 45pt;z-index: 9999;';
+//   clearInterval(myVar);
+//  }
+// }
 
 // var my_awesome_script = document.createElement('script');
 // my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@cce8ce7/fbchatplugin.js');
@@ -175,7 +175,7 @@ whatsapp.onclick = function(){
     window.open("https://web.whatsapp.com/send?phone=919494493639", "_blank");
   }
 }
-showOptionsContainer.style = "bottom:30pt;right:30pt;position:fixed;z-index: 9999";
+showOptionsContainer.style = "bottom:18pt;right:18pt;position:fixed;z-index: 9999";
 
 
 showOptionsContainer.appendChild(facebookIcon)
