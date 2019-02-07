@@ -2,7 +2,7 @@
      FB.init({
        appId            : '1102875969894081',
        autoLogAppEvents : true,
-       xfbml            : true,
+       xfbml            : false,
        version          : 'v2.11'
      });
 //   FB.Event.subscribe('customerchat.load', function(){
@@ -94,6 +94,7 @@ let facebookWidgetDiv= document.createElement('div');
 facebookWidgetDiv.setAttribute('id', 'fb-root');
 showOptionsContainer.appendChild(facebookWidgetDiv);
 
+let flag = true;
 var facebookIcon = document.createElement('IMG');
 facebookIcon.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles/icons8-facebook-messenger-filled-100.png');
 facebookIcon.setAttribute("width", "48");
@@ -103,6 +104,10 @@ facebookIcon.style = 'cursor: pointer';
 facebookIcon.onclick = function() {
 //  FB.XFBML.parse();
  FB.CustomerChat.showDialog();
+ if(flag){
+  FB.XFBML.parse();
+  flag = false;
+ }
 }
 // facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
 // function showFbChat(d,s,id){
