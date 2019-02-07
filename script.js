@@ -5,9 +5,10 @@
        xfbml            : true,
        version          : 'v2.11'
      });
-    FB.CustomerChat.hide();
   FB.Event.subscribe('customerchat.dialogHide', function(){
    FB.CustomerChat.hide();
+    var showOptionsContainer = document.getElementById("chat-widget-container");
+    showOptionsContainer.style.display = "inline-grid";
   });
 
 //     $(document).trigger('fbload'); 
@@ -97,6 +98,8 @@ facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
 facebookIcon.onclick = function() {
  FB.CustomerChat.showDialog();
+    var showOptionsContainer = document.getElementById("chat-widget-container");
+    showOptionsContainer.style.display = "none";
 }
 // facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
 // function showFbChat(d,s,id){
@@ -177,6 +180,7 @@ showOptionsContainer.appendChild(whatsappContainer);
 showOptionsContainer.appendChild(closeButtonContainer);
 
 autochatIcon.onclick = function(){
+   FB.CustomerChat.hide();
     var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "inline-grid";
     var autochatImageContainer = document.getElementById("autochat-image-container");
