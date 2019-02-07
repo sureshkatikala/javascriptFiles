@@ -2,7 +2,7 @@
      FB.init({
        appId            : '1102875969894081',
        autoLogAppEvents : true,
-       xfbml            : false,
+       xfbml            : true,
        version          : 'v2.11'
      });
   FB.Event.subscribe('customerchat.load', function(){
@@ -103,11 +103,11 @@ facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
 facebookIcon.onclick = function() {
 //  FB.XFBML.parse();
- if(flag){
-  FB.XFBML.parse();
-   FB.CustomerChat.showDialog();
-  flag = false;
- }
+//  if(flag){
+// //   FB.XFBML.parse();
+//    FB.CustomerChat.showDialog();
+//   flag = false;
+//  }
  FB.CustomerChat.showDialog();
 
 }
