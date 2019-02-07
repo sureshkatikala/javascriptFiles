@@ -5,6 +5,11 @@
        xfbml            : true,
        version          : 'v2.11'
      });
+    FB.CustomerChat.hide();
+  FB.Event.subscribe('customerchat.dialogHide', function(){
+   FB.CustomerChat.hide();
+  });
+
 //     $(document).trigger('fbload'); 
  };
 (function(d, s, id){
@@ -69,9 +74,9 @@ let myVar = setInterval(myTimer, 1000);
 
 function myTimer() {
 let facebookIconDisplayStyling = document.getElementsByClassName('fb_dialog');
- console.log('inside', facebookIconDisplayStyling)
+console.log('inside', facebookIconDisplayStyling)
 if(facebookIconDisplayStyling.length !== 0) {
-  facebookIconDisplayStyling[0].style = 'background: none;border-radius: 50%;bottom: 115pt !important;display: inline;height: 45pt;padding: 0px;position: fixed;right: 25pt !important;top: auto;width: 45pt;z-index: 9999;';
+  facebookIconDisplayStyling[0].style = 'background: none;border-radius: 50%;bottom: 30pt !important;display: inline;height: 45pt;padding: 0px;position: fixed;right: 25pt !important;top: auto;width: 45pt;z-index: 9999;';
   clearInterval(myVar);
  }
 }
@@ -90,6 +95,9 @@ facebookIcon.setAttribute("width", "48");
 facebookIcon.setAttribute("height", "48");
 facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
+facebookIcon.onclick = function() {
+ FB.CustomerChat.showDialog();
+}
 // facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
 // function showFbChat(d,s,id){
 //    FB.XFBML.parse();
