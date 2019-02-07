@@ -103,11 +103,12 @@ facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
 facebookIcon.onclick = function() {
 //  FB.XFBML.parse();
- FB.CustomerChat.showDialog();
  if(flag){
   FB.XFBML.parse();
   flag = false;
  }
+ FB.CustomerChat.showDialog();
+
 }
 // facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
 // function showFbChat(d,s,id){
