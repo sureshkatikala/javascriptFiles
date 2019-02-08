@@ -89,10 +89,10 @@ facebookDiv.setAttribute("minimized","true");
 // var my_awesome_script = document.createElement('script');
 // my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@cce8ce7/fbchatplugin.js');
 
-// showOptionsContainer.appendChild(facebookDiv);
-// let facebookWidgetDiv= document.createElement('div');
-// facebookWidgetDiv.setAttribute('id', 'fb-root');
-// showOptionsContainer.appendChild(facebookWidgetDiv);
+showOptionsContainer.appendChild(facebookDiv);
+let facebookWidgetDiv= document.createElement('div');
+facebookWidgetDiv.setAttribute('id', 'fb-root');
+showOptionsContainer.appendChild(facebookWidgetDiv);
 
 let flag = true;
 var facebookIcon = document.createElement('IMG');
