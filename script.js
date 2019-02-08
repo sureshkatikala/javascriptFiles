@@ -11,8 +11,8 @@
 
   FB.Event.subscribe('customerchat.dialogHide', function(){
    FB.CustomerChat.hide();
-   var showOptionsContainer = document.getElementById("chat-widget-container");
-    showOptionsContainer.style.display = "inline-grid";
+//    var showOptionsContainer = document.getElementById("chat-widget-container");
+//     showOptionsContainer.style.display = "inline-grid";
   });
 
 //     $(document).trigger('fbload'); 
@@ -102,8 +102,8 @@ facebookIcon.setAttribute("height", "48");
 facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
 facebookIcon.onclick = function() {
- var showOptionsContainer = document.getElementById("chat-widget-container");
-    showOptionsContainer.style.display = "none";
+//  var showOptionsContainer = document.getElementById("chat-widget-container");
+//     showOptionsContainer.style.display = "none";
 //  FB.XFBML.parse();
 //  if(flag){
 // //   FB.XFBML.parse();
