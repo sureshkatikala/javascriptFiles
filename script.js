@@ -202,8 +202,8 @@ showOptionsContainer.appendChild(closeButtonContainer);
 
 autochatIcon.onclick = function(){
 //    FB.XFBML.parse();
-    FB.CustomerChat.hideDialog();
-    FB.CustomerChat.hide();
+//     FB.CustomerChat.hideDialog();
+//     FB.CustomerChat.hide();
     var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "inline-grid";
     var autochatImageContainer = document.getElementById("autochat-image-container");
