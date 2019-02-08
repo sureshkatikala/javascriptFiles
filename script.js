@@ -7,8 +7,6 @@
      });
   FB.Event.subscribe('customerchat.load', function(){
    FB.CustomerChat.showDialog();
-   
-   
   });
 
   FB.Event.subscribe('customerchat.dialogHide', function(){
@@ -191,8 +189,8 @@ showOptionsContainer.appendChild(closeButtonContainer);
 
 autochatIcon.onclick = function(){
 //    FB.XFBML.parse();
-   FB.CustomerChat.hide();
- FB.CustomerChat.hideDialog();
+    FB.CustomerChat.hideDialog();
+    FB.CustomerChat.hide();
     var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "inline-grid";
     var autochatImageContainer = document.getElementById("autochat-image-container");
