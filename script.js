@@ -109,7 +109,7 @@ facebookIcon.setAttribute("height", "48");
 facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
 facebookIcon.onclick = function() {
- var showOptionsContainer = document.getElementById("chat-widget-container");
+//  var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "none";
 //  FB.XFBML.parse();
 //  if(flag){
@@ -117,8 +117,8 @@ facebookIcon.onclick = function() {
 //    FB.CustomerChat.showDialog();
 //   flag = false;
 //  }
- let facebookWidgetContainer = document.getElementById('facebook-widget-container');
- facebookWidgetContainer.style.display = 'block';
+//  let facebookWidgetContainer = document.getElementById('facebook-widget-container');
+ facebookWidgetContainer.style.display = 'inline';
  FB.CustomerChat.showDialog();
 
 }
