@@ -97,9 +97,9 @@ facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
 facebookWidgetContainer.style.display = 'none';
 facebookWidgetContainer.appendChild(facebookDiv);
 // showOptionsContainer.appendChild(facebookDiv);
-// let facebookWidgetDiv= document.createElement('div');
-// facebookWidgetDiv.setAttribute('id', 'fb-root');
-// showOptionsContainer.appendChild(facebookWidgetDiv);
+let facebookWidgetDiv= document.createElement('div');
+facebookWidgetDiv.setAttribute('id', 'fb-root');
+facebookWidgetContainer.appendChild(facebookWidgetDiv);
 
 let flag = true;
 var facebookIcon = document.createElement('IMG');
