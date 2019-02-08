@@ -11,6 +11,8 @@
 
   FB.Event.subscribe('customerchat.dialogHide', function(){
    FB.CustomerChat.hide();
+   var showOptionsContainer = document.getElementById("chat-widget-container");
+    showOptionsContainer.style.display = "inline-grid";
   });
 
 //     $(document).trigger('fbload'); 
@@ -87,7 +89,7 @@ facebookDiv.setAttribute("minimized","true");
 // var my_awesome_script = document.createElement('script');
 // my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@cce8ce7/fbchatplugin.js');
 
-showOptionsContainer.appendChild(facebookDiv);
+// showOptionsContainer.appendChild(facebookDiv);
 let facebookWidgetDiv= document.createElement('div');
 facebookWidgetDiv.setAttribute('id', 'fb-root');
 showOptionsContainer.appendChild(facebookWidgetDiv);
@@ -100,6 +102,8 @@ facebookIcon.setAttribute("height", "48");
 facebookIcon.setAttribute("alt", "messenger icon");
 facebookIcon.style = 'cursor: pointer';
 facebookIcon.onclick = function() {
+ var showOptionsContainer = document.getElementById("chat-widget-container");
+    showOptionsContainer.style.display = "none";
 //  FB.XFBML.parse();
 //  if(flag){
 // //   FB.XFBML.parse();
