@@ -10,7 +10,7 @@
 //   });
 
   FB.Event.subscribe('customerchat.dialogHide', function(){
-   FB.CustomerChat.hide();
+//    FB.CustomerChat.hide();
    let facebookWidgetContainer = document.getElementById('facebook-widget-container');
     facebookWidgetContainer.style.display = 'none';
    
@@ -119,7 +119,7 @@ facebookIcon.onclick = function() {
 //  }
 //  let facebookWidgetContainer = document.getElementById('facebook-widget-container');
  facebookWidgetContainer.style.display = 'inline';
- FB.CustomerChat.showDialog();
+//  FB.CustomerChat.showDialog();
 
 }
 // facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
