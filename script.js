@@ -10,7 +10,7 @@
 //   });
 
   FB.Event.subscribe('customerchat.dialogHide', function(){
-   FB.CustomerChat.hideDialog();
+   FB.CustomerChat.hide();
    let facebookWidgetContainer = document.getElementById('facebook-widget-container');
     facebookWidgetContainer.style.display = 'none';
    
