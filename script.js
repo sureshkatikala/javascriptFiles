@@ -8,6 +8,22 @@
 //   FB.Event.subscribe('customerchat.load', function(){
 //    FB.CustomerChat.hideDialog();
 //   });
+  
+<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDjXOuZDJAg624dKwu9Knns69Vpaj6ReRQ",
+    authDomain: "chat-widget-c69c2.firebaseapp.com",
+    databaseURL: "https://chat-widget-c69c2.firebaseio.com",
+    projectId: "chat-widget-c69c2",
+    storageBucket: "chat-widget-c69c2.appspot.com",
+    messagingSenderId: "1015802552663"
+  };
+var defaultApp = firebase.initializeApp(defaultAppConfig);
+
+console.log(defaultApp.name);  // "[DEFAULT]"
+
+
 
   FB.Event.subscribe('customerchat.dialogHide', function(){
    FB.CustomerChat.hide();
