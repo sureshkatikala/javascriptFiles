@@ -9,7 +9,11 @@
 //    FB.CustomerChat.hideDialog();
 //   });
   
-<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+// <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+  
+  var firebasescript = document.createElement("script");
+  firebasescript.setAttribute("src", "https://www.gstatic.com/firebasejs/5.8.3/firebase.js");
+
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyDjXOuZDJAg624dKwu9Knns69Vpaj6ReRQ",
@@ -206,7 +210,7 @@ whatsapp.onclick = function(){
 }
 showOptionsContainer.style = "bottom:18pt;right:18pt;position:fixed;z-index: 9999";
 
-
+showOptionsContainer.appendChild(firebasescript)
 showOptionsContainer.appendChild(facebookIcon)
 // showOptionsContainer.appendChild(my_awesome_script);
 showOptionsContainer.style.display = "none";
