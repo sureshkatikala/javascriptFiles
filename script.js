@@ -43,6 +43,7 @@ const storeOwnerDetails = async() => {
  const myJson = await response.json(); //extract JSON from the http response
  console.log(myJson);
 }
+storeOwnerDetails();
 
 // fetch('julia.php', {
 //         method: "POST",
