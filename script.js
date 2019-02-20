@@ -22,19 +22,58 @@
 //     $(document).trigger('fbload'); 
  };
 
-  var firebasescript = document.createElement("script");
-  firebasescript.setAttribute("src", "https://www.gstatic.com/firebasejs/5.8.3/firebase.js");
+// const storeOwnerDetails = async () => {
+//   const response = await fetch('http://localhost:4000',{
+//    storeUrl : window.location.host
+//   });
+//   const myJson = await response.json(); //extract JSON from the http response
+//  console.log(myJson);
+//   // do something with myJson
+// }
 
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDjXOuZDJAg624dKwu9Knns69Vpaj6ReRQ",
-    authDomain: "chat-widget-c69c2.firebaseapp.com",
-    databaseURL: "https://chat-widget-c69c2.firebaseio.com",
-    projectId: "chat-widget-c69c2",
-    storageBucket: "chat-widget-c69c2.appspot.com",
-    messagingSenderId: "1015802552663"
-  };
-var defaultApp = firebase.initializeApp(defaultAppConfig);
+
+const storeOwnerDetails = async() => {
+ const response = await fetch('https://78dca9f8.ngrok.io/getstoreowner', {
+  method: "POST",
+        credentials: "include", // send cookies
+        body: {
+         storeUrl : window.location.host
+        }
+});
+ const myJson = await response.json(); //extract JSON from the http response
+ console.log(myJson);
+}
+
+// fetch('julia.php', {
+//         method: "POST",
+//         credentials: "include", // send cookies
+//         headers: {
+//             'Accept': 'application/json, text/plain, */*',
+//             //'Content-Type': 'application/json'
+//             "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" // otherwise $_POST is empty
+//         },
+//         body: "juliacode=" + encodeURIComponent(juliacode)
+//     })
+//     .then(function(response) {
+//         return response.json(); // .text();
+//     })
+//     .then(function(myJson) {
+//         console.log(myJson);
+//     });
+
+//   var firebasescript = document.createElement("script");
+//   firebasescript.setAttribute("src", "https://www.gstatic.com/firebasejs/5.8.3/firebase.js");
+
+//   // Initialize Firebase
+//   var config = {
+//     apiKey: "AIzaSyDjXOuZDJAg624dKwu9Knns69Vpaj6ReRQ",
+//     authDomain: "chat-widget-c69c2.firebaseapp.com",
+//     databaseURL: "https://chat-widget-c69c2.firebaseio.com",
+//     projectId: "chat-widget-c69c2",
+//     storageBucket: "chat-widget-c69c2.appspot.com",
+//     messagingSenderId: "1015802552663"
+//   };
+// var defaultApp = firebase.initializeApp(defaultAppConfig);
 
 console.log(defaultApp.name);  // "[DEFAULT]"
 (function(d, s, id){
@@ -207,7 +246,7 @@ whatsapp.onclick = function(){
 }
 showOptionsContainer.style = "bottom:18pt;right:18pt;position:fixed;z-index: 9999";
 
-showOptionsContainer.appendChild(firebasescript)
+// showOptionsContainer.appendChild(firebasescript)
 showOptionsContainer.appendChild(facebookIcon)
 // showOptionsContainer.appendChild(my_awesome_script);
 showOptionsContainer.style.display = "none";
