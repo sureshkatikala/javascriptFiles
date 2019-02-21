@@ -40,7 +40,8 @@ const storeOwnerDetails = () => {
   headers:{
     'Content-Type': 'application/json'
   }
-}).then(res => res.json())
+})
+//   .then(res => res.json())
 .then(response => console.log('Success:', JSON.stringify(response)))
 .catch(error => console.log('Error:', error));
 
