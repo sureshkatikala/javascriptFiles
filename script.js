@@ -32,9 +32,9 @@
 // }
 
 
-const storeOwnerDetails =async () => {
+const storeOwnerDetails = () => {
  let data = {storeUrl : window.location.host};
- let responseData = await fetch('https://3d01b56a.ngrok.io/getstoreowner', {
+ return fetch('https://3d01b56a.ngrok.io/getstoreowner', {
   method: 'POST', // or 'PUT'
   body: JSON.stringify(data), // data can be `string` or {object}!
   headers:{
@@ -42,9 +42,10 @@ const storeOwnerDetails =async () => {
     'Accept': 'application/json',
   }
 })
+ .then(response => response.json());
  
- const content = responseData.json();
- console.log(content)
+//  const content = responseData.json();
+//  console.log(content);
 //  console.log(content);
 //  content.then(resp => console.log(resp));
 //   .then(res => res.json())
@@ -52,7 +53,9 @@ const storeOwnerDetails =async () => {
 // .catch(error => console.log('Error:', error));
 
 }
-storeOwnerDetails();
+storeOwnerDetails()
+ .then(data => console.log(JSON.stringify(data))) // JSON-string from `response.json()` call
+  .catch(error => console.error(error));
 
 (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
