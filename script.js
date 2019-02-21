@@ -55,7 +55,7 @@ const storeOwnerDetails = () => {
 }
 storeOwnerDetails()
  .then(data => console.log(JSON.stringify(data))) // JSON-string from `response.json()` call
-  .catch(error => console.error(error));
+  .catch(error => console.log(error));
 
 (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
