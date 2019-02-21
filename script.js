@@ -38,12 +38,14 @@ const storeOwnerDetails =async () => {
   method: 'POST', // or 'PUT'
   body: JSON.stringify(data), // data can be `string` or {object}!
   headers:{
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
   }
 })
  
  const content = await responseData.json();
- console.log(content);
+//  console.log(content);
+ content.then(resp => console.log(resp));
 //   .then(res => res.json())
 // .then(response => console.log('Success:', JSON.stringify(response)))
 // .catch(error => console.log('Error:', error));
