@@ -33,7 +33,7 @@
 
 
 const storeOwnerDetails = async() => {
- const response = await fetch('https://c873eb65.ngrok.io/getstoreowner', {
+ const response = await fetch('https://3d01b56a.ngrok.io/getstoreowner', {
         method: "POST",
         credentials: "include", // send cookies
         body: {
