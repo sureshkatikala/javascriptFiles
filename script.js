@@ -42,7 +42,9 @@ const storeOwnerDetails = () => {
     'Accept': 'application/json',
   }
 })
- .then(response => response.json());
+ .then(response => {
+  console.log(response);
+ });
  
 //  const content = responseData.json();
 //  console.log(content);
@@ -54,8 +56,8 @@ const storeOwnerDetails = () => {
 
 }
 storeOwnerDetails()
- .then(data => console.log(JSON.stringify(data))) // JSON-string from `response.json()` call
-  .catch(error => console.log(error));
+//  .then(data => console.log(JSON.stringify(data))) // JSON-string from `response.json()` call
+//   .catch(error => console.log(error));
 
 (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
