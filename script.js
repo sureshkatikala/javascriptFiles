@@ -45,7 +45,7 @@ const storeOwnerDetails = async() => {
 //          "Content-Type": "application/json",
 //        },
 });
- const myJson = await response.json(); //extract JSON from the http response
+ const myJson = response; //extract JSON from the http response
  console.log(myJson);
 }
 storeOwnerDetails();
@@ -81,7 +81,7 @@ storeOwnerDetails();
 //   };
 // var defaultApp = firebase.initializeApp(defaultAppConfig);
 
-console.log(defaultApp.name);  // "[DEFAULT]"
+// console.log(defaultApp.name);  // "[DEFAULT]"
 (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
