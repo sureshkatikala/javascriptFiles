@@ -45,7 +45,7 @@ const storeOwnerDetails = async() => {
 //          "Content-Type": "application/json",
 //        },
 });
- const myJson = response; //extract JSON from the http response
+ const myJson = await response; //extract JSON from the http response
  console.log(myJson);
 }
 storeOwnerDetails();
