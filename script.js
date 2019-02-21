@@ -44,8 +44,9 @@ const storeOwnerDetails =async () => {
 })
  
  const content = await responseData;
+ console.log(content)
 //  console.log(content);
- content.then(resp => console.log(resp));
+//  content.then(resp => console.log(resp));
 //   .then(res => res.json())
 // .then(response => console.log('Success:', JSON.stringify(response)))
 // .catch(error => console.log('Error:', error));
