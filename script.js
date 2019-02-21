@@ -43,7 +43,8 @@ const storeOwnerDetails = () => {
   }
 })
  .then(response => {
-  console.log(response);
+  
+  console.log(response.body);
  });
  
 //  const content = responseData.json();
