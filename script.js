@@ -43,7 +43,7 @@ const storeOwnerDetails =async () => {
   }
 })
  
- const content = await responseData;
+ const content = responseData.json();
  console.log(content)
 //  console.log(content);
 //  content.then(resp => console.log(resp));
