@@ -39,13 +39,13 @@ const storeOwnerDetails = async() => {
         body: {
          storeUrl : window.location.host
         },
-//         headers: {
+        headers: {
 //          "Access-Control-Allow-Credentials": true,
 //          "Access-Control-Allow-Origin": "*",
-//          "Content-Type": "application/json",
-//        },
+         "Content-Type": "application/json",
+       },
 });
- const myJson = await response; //extract JSON from the http response
+ const myJson = await response.json(); //extract JSON from the http response
  console.log(myJson);
 }
 storeOwnerDetails();
