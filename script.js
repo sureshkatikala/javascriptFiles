@@ -39,12 +39,12 @@ const storeOwnerDetails = () => {
   body: JSON.stringify(data), // data can be `string` or {object}!
   headers:{
     'Content-Type': 'application/json',
-//     'Accept': 'application/json',
+    'Accept': 'application/json',
   }
 })
  .then(response => {
   
-  console.log(response.body);
+  console.log(response);
  });
  
 //  const content = responseData.json();
