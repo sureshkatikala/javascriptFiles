@@ -32,56 +32,21 @@
 // }
 
 
-const storeOwnerDetails = async() => {
- const response = await fetch('https://3d01b56a.ngrok.io/getstoreowner', {
-        method: "POST",
-//         credentials: "include", // send cookies
-        body: {
-         storeUrl : window.location.host
-        },
-//         headers: {
-// //          "Access-Control-Allow-Credentials": true,
-// //          "Access-Control-Allow-Origin": "*",
-//          "Content-Type": "application/json",
-//        },
-});
- const myJson = await response.json(); //extract JSON from the http response
- console.log(myJson);
+const storeOwnerDetails = () => {
+ let data = {storeUrl : window.location.host};
+ fetch('https://3d01b56a.ngrok.io/getstoreowner', {
+  method: 'POST', // or 'PUT'
+  body: JSON.stringify(data), // data can be `string` or {object}!
+  headers:{
+    'Content-Type': 'application/json'
+  }
+}).then(res => res.json())
+.then(response => console.log('Success:', JSON.stringify(response)))
+.catch(error => console.error('Error:', error));
+
 }
 storeOwnerDetails();
 
-// fetch('julia.php', {
-//         method: "POST",
-//         credentials: "include", // send cookies
-//         headers: {
-//             'Accept': 'application/json, text/plain, */*',
-//             //'Content-Type': 'application/json'
-//             "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" // otherwise $_POST is empty
-//         },
-//         body: "juliacode=" + encodeURIComponent(juliacode)
-//     })
-//     .then(function(response) {
-//         return response.json(); // .text();
-//     })
-//     .then(function(myJson) {
-//         console.log(myJson);
-//     });
-
-//   var firebasescript = document.createElement("script");
-//   firebasescript.setAttribute("src", "https://www.gstatic.com/firebasejs/5.8.3/firebase.js");
-
-//   // Initialize Firebase
-//   var config = {
-//     apiKey: "AIzaSyDjXOuZDJAg624dKwu9Knns69Vpaj6ReRQ",
-//     authDomain: "chat-widget-c69c2.firebaseapp.com",
-//     databaseURL: "https://chat-widget-c69c2.firebaseio.com",
-//     projectId: "chat-widget-c69c2",
-//     storageBucket: "chat-widget-c69c2.appspot.com",
-//     messagingSenderId: "1015802552663"
-//   };
-// var defaultApp = firebase.initializeApp(defaultAppConfig);
-
-// console.log(defaultApp.name);  // "[DEFAULT]"
 (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
