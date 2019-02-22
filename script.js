@@ -34,7 +34,7 @@
 
 const storeOwnerDetails = () => {
  let data = {storeUrl : window.location.host};
- return fetch('https://3d01b56a.ngrok.io/getstoreowner', {
+ return fetch('https://9e599449.ngrok.io/getstoreowner', {
   method: 'POST', // or 'PUT'
   body: JSON.stringify(data), // data can be `string` or {object}!
   headers:{
