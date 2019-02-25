@@ -98,7 +98,7 @@ whatsapp.style = 'cursor: pointer';
 var facebookDiv = document.createElement("div");
 facebookDiv.setAttribute("class", "fb-customerchat");
 facebookDiv.setAttribute("id",'fb')
-facebookDiv.setAttribute("page_id", fbPageId);
+facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
 
 // let myVar = setInterval(myTimer, 1000);
