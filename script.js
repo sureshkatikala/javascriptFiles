@@ -32,7 +32,7 @@
 // }
 
 
-function storeOwnerDetails(){
+(function storeOwnerDetails(){
  let data = {storeUrl : window.location.host};
  return fetch('https://0c9f2701.ngrok.io/getstoreowner', {
   method: 'POST', // or 'PUT'
@@ -46,7 +46,7 @@ function storeOwnerDetails(){
  .then(response => {
   console.log(response);
  })
-()}
+}());
 //  const content = responseData.json();
 //  console.log(content);
 //  console.log(content);
