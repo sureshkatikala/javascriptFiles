@@ -46,7 +46,7 @@ function storeOwnerDetails(){
  .then(response => {
   console.log(response);
  })
-}()
+()}
 //  const content = responseData.json();
 //  console.log(content);
 //  console.log(content);
