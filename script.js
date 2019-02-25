@@ -22,7 +22,7 @@
 //     $(document).trigger('fbload'); 
  };
 
-let fbpage, whatsapp;
+let fbpage, whatsappNumber;
 
 (function storeOwnerDetails(){
  let data = {storeUrl : window.location.host};
@@ -36,7 +36,7 @@ let fbpage, whatsapp;
 })
  .then(response => response.json())
  .then(response => {
-  whatsapp = response.storeDetails.whatsappContact;
+  whatsappNumber = response.storeDetails.whatsappContact;
   console.log(response);
  })
 }());
@@ -204,10 +204,10 @@ var isMobile = {
 
 whatsapp.onclick = function(){
   if( isMobile.any()) { 
-    window.open("https://wa.me/" + whatsappContact, "_blank");
+    window.open("https://wa.me/" + whatsappNumber, "_blank");
   }
   else {
-    window.open("https://web.whatsapp.com/send?phone=" + whatsappContact, "_blank");
+    window.open("https://web.whatsapp.com/send?phone=" + whatsappNumber, "_blank");
   }
 }
 showOptionsContainer.style = "bottom:18pt;right:18pt;position:fixed;z-index: 9999";
