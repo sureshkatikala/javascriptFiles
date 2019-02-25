@@ -32,7 +32,7 @@
 // }
 
 
-const storeOwnerDetails = () => {
+function storeOwnerDetails(){
  let data = {storeUrl : window.location.host};
  return fetch('https://0c9f2701.ngrok.io/getstoreowner', {
   method: 'POST', // or 'PUT'
@@ -45,8 +45,8 @@ const storeOwnerDetails = () => {
  .then(response => response.json())
  .then(response => {
   console.log(response);
- });
- 
+ })
+}()
 //  const content = responseData.json();
 //  console.log(content);
 //  console.log(content);
@@ -55,8 +55,7 @@ const storeOwnerDetails = () => {
 // .then(response => console.log('Success:', JSON.stringify(response)))
 // .catch(error => console.log('Error:', error));
 
-}
-storeOwnerDetails()
+// storeOwnerDetails();
 //  .then(data => console.log(JSON.stringify(data))) // JSON-string from `response.json()` call
 //   .catch(error => console.log(error));
 
