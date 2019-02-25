@@ -22,15 +22,7 @@
 //     $(document).trigger('fbload'); 
  };
 
-// const storeOwnerDetails = async () => {
-//   const response = await fetch('http://localhost:4000',{
-//    storeUrl : window.location.host
-//   });
-//   const myJson = await response.json(); //extract JSON from the http response
-//  console.log(myJson);
-//   // do something with myJson
-// }
-
+let fbpage, whatsapp;
 
 (function storeOwnerDetails(){
  let data = {storeUrl : window.location.host};
@@ -44,20 +36,11 @@
 })
  .then(response => response.json())
  .then(response => {
+  whatsapp = response.storeDetails.whatsappContact;
   console.log(response);
  })
 }());
-//  const content = responseData.json();
-//  console.log(content);
-//  console.log(content);
-//  content.then(resp => console.log(resp));
-//   .then(res => res.json())
-// .then(response => console.log('Success:', JSON.stringify(response)))
-// .catch(error => console.log('Error:', error));
 
-// storeOwnerDetails();
-//  .then(data => console.log(JSON.stringify(data))) // JSON-string from `response.json()` call
-//   .catch(error => console.log(error));
 
 (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -221,10 +204,10 @@ var isMobile = {
 
 whatsapp.onclick = function(){
   if( isMobile.any()) { 
-    window.open("https://wa.me/919494493639", "_blank");
+    window.open("https://wa.me/" + whatsappContact, "_blank");
   }
   else {
-    window.open("https://web.whatsapp.com/send?phone=919494493639", "_blank");
+    window.open("https://web.whatsapp.com/send?phone=" + whatsappContact, "_blank");
   }
 }
 showOptionsContainer.style = "bottom:18pt;right:18pt;position:fixed;z-index: 9999";
