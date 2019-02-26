@@ -96,13 +96,15 @@ whatsapp.style = 'cursor: pointer';
 //      FB.Event.subscribe('customerchat.load', ()=>{
 //        FB.XFBML.parse(document.getElementById('chat-widget-container'));
 // });
-let myVar = setInterval(myTimer, 1000);
 
-function myTimer() {
 var facebookDiv = document.createElement("div");
 facebookDiv.setAttribute("class", "fb-customerchat");
 facebookDiv.setAttribute("id",'fb')
 facebookDiv.setAttribute("minimized","true");
+
+let myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
 if(fbPageId== 0) {
      facebookDiv.setAttribute("page_id", fbPageId);
   clearInterval(myVar);
