@@ -171,7 +171,7 @@ facebookIcon.onclick = function() {
 //  FB.XFBML.parse();
  if(flag){
   FB.XFBML.parse();
-   FB.CustomerChat.showDialog();
+//    FB.CustomerChat.showDialog();
   flag = false;
  }
 //  let facebookWidgetContainer = document.getElementById('facebook-widget-container');
