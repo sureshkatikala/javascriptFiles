@@ -103,14 +103,7 @@ facebookDiv.setAttribute("id",'fb')
 facebookDiv.setAttribute("minimized","true");
 facebookDiv.setAttribute("page_id", '0');
 
-let myVar = setInterval(myTimer, 1000);
 
-function myTimer() {
-if(fbPageId== 0) {
-     facebookDiv.setAttribute("page_id", fbPageId);
-  clearInterval(myVar);
- }
-}
 
 // var facebookDiv = document.createElement("div");
 // facebookDiv.setAttribute("class", "fb-customerchat");
@@ -135,8 +128,24 @@ if(fbPageId== 0) {
 let facebookWidgetContainer = document.createElement('div');
 facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
 facebookWidgetContainer.style.display = 'none';
-facebookWidgetContainer.appendChild(facebookDiv);
+// facebookWidgetContainer.appendChild(facebookDiv);
 // showOptionsContainer.appendChild(facebookDiv);
+
+let myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+ var facebookDiv = document.createElement("div");
+facebookDiv.setAttribute("class", "fb-customerchat");
+facebookDiv.setAttribute("id",'fb')
+facebookDiv.setAttribute("minimized","true");
+
+if(fbPageId== 0) {
+     facebookDiv.setAttribute("page_id", fbPageId);
+ facebookWidgetContainer.appendChild(facebookDiv);
+  clearInterval(myVar);
+ }
+}
+
 let facebookWidgetDiv= document.createElement('div');
 facebookWidgetDiv.setAttribute('id', 'fb-root');
 facebookWidgetContainer.appendChild(facebookWidgetDiv);
