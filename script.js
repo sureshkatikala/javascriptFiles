@@ -2,7 +2,7 @@
      FB.init({
        appId            : '1102875969894081',
        autoLogAppEvents : true,
-       xfbml            : true,
+       xfbml            : false,
        version          : 'v2.11'
      });
 //   FB.Event.subscribe('customerchat.load', function(){
@@ -12,8 +12,8 @@
 // <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
   FB.Event.subscribe('customerchat.dialogHide', function(){
    FB.CustomerChat.hide();
-   let facebookWidgetContainer = document.getElementById('facebook-widget-container');
-    facebookWidgetContainer.style.display = 'none';
+//    let facebookWidgetContainer = document.getElementById('facebook-widget-container');
+//     facebookWidgetContainer.style.display = 'none';
    
    var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "inline-grid";
@@ -143,15 +143,15 @@ facebookDiv.setAttribute("id",'fb')
 facebookDiv.setAttribute("minimized","true");
 let facebookWidgetDiv= document.createElement('div');
 facebookWidgetDiv.setAttribute('id', 'fb-root');
-
-function myTimer() {
-if(fbPageId== 0) {
-     facebookDiv.setAttribute("page_id", fbPageId);
-      facebookWidgetContainer.appendChild(facebookDiv);
-     facebookWidgetContainer.appendChild(facebookWidgetDiv);
-         clearInterval(myVar);
- }
-}
+facebookDiv.setAttribute("page_id", fbPageId);
+facebookWidgetContainer.appendChild(facebookDiv);
+facebookWidgetContainer.appendChild(facebookWidgetDiv);
+// function myTimer() {
+// if(fbPageId== 0) {
+    
+//          clearInterval(myVar);
+//  }
+// }
 
 // let facebookWidgetDiv= document.createElement('div');
 // facebookWidgetDiv.setAttribute('id', 'fb-root');
@@ -167,11 +167,11 @@ facebookIcon.onclick = function() {
 //  var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "none";
 //  FB.XFBML.parse();
-//  if(flag){
-// //   FB.XFBML.parse();
-//    FB.CustomerChat.showDialog();
-//   flag = false;
-//  }
+ if(flag){
+  FB.XFBML.parse();
+   FB.CustomerChat.showDialog();
+  flag = false;
+ }
 //  let facebookWidgetContainer = document.getElementById('facebook-widget-container');
  facebookWidgetContainer.style.display = 'inline';
  FB.CustomerChat.showDialog();
