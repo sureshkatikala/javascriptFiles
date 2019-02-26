@@ -2,7 +2,7 @@
      FB.init({
        appId            : '1102875969894081',
        autoLogAppEvents : true,
-       xfbml            : true,
+       xfbml            : false,
        version          : 'v2.11'
      });
 //   FB.Event.subscribe('customerchat.load', function(){
@@ -169,11 +169,11 @@ facebookIcon.onclick = function() {
 //  var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "none";
 //  FB.XFBML.parse();
-//  if(flag){
-//   FB.XFBML.parse();
-//    FB.CustomerChat.showDialog();
-//   flag = false;
-//  }
+ if(flag){
+  FB.XFBML.parse();
+   FB.CustomerChat.showDialog();
+  flag = false;
+ }
 //  let facebookWidgetContainer = document.getElementById('facebook-widget-container');
  facebookWidgetContainer.style.display = 'inline';
  FB.CustomerChat.showDialog();
