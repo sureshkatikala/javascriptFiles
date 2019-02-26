@@ -135,22 +135,21 @@ whatsapp.style = 'cursor: pointer';
 let myVar = setInterval(myTimer, 1000);
 let facebookWidgetContainer = document.createElement('div');
 var facebookDiv = document.createElement("div");
-
-function myTimer() {
 facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
 facebookWidgetContainer.style.display = 'none';
+
 facebookDiv.setAttribute("class", "fb-customerchat");
 facebookDiv.setAttribute("id",'fb')
 facebookDiv.setAttribute("minimized","true");
- 
 let facebookWidgetDiv= document.createElement('div');
 facebookWidgetDiv.setAttribute('id', 'fb-root');
 
+function myTimer() {
 if(fbPageId== 0) {
      facebookDiv.setAttribute("page_id", fbPageId);
-     facebookWidgetContainer.appendChild(facebookDiv);
+      facebookWidgetContainer.appendChild(facebookDiv);
      facebookWidgetContainer.appendChild(facebookWidgetDiv);
-     clearInterval(myVar);
+         clearInterval(myVar);
  }
 }
 
