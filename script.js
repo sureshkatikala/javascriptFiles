@@ -22,7 +22,7 @@
 //     $(document).trigger('fbload'); 
  };
 
-let fbPageId = 0
+let fbPageId = 0;
 let whatsappNumber;
 
 (function storeOwnerDetails(){
@@ -40,6 +40,7 @@ let whatsappNumber;
   whatsappNumber = response.storeDetails.whatsappContact;
   fbPageId = response.storeDetails.facebookPage;
   console.log(response);
+  console.log(fbPageId)
  })
 }());
 
