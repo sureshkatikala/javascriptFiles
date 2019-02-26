@@ -97,11 +97,11 @@ whatsapp.style = 'cursor: pointer';
 //        FB.XFBML.parse(document.getElementById('chat-widget-container'));
 // });
 
-var facebookDiv = document.createElement("div");
-facebookDiv.setAttribute("class", "fb-customerchat");
-facebookDiv.setAttribute("id",'fb')
-facebookDiv.setAttribute("minimized","true");
-facebookDiv.setAttribute("page_id", '0');
+// var facebookDiv = document.createElement("div");
+// facebookDiv.setAttribute("class", "fb-customerchat");
+// facebookDiv.setAttribute("id",'fb')
+// facebookDiv.setAttribute("minimized","true");
+// facebookDiv.setAttribute("page_id", '0');
 
 
 
