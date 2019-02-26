@@ -134,20 +134,22 @@ whatsapp.style = 'cursor: pointer';
 
 let facebookWidgetContainer = document.createElement('div');
 var facebookDiv = document.createElement("div");
-facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
-facebookWidgetContainer.style.display = 'none';
 
-facebookDiv.setAttribute("class", "fb-customerchat");
-facebookDiv.setAttribute("id",'fb')
-facebookDiv.setAttribute("minimized","true");
 let facebookWidgetDiv= document.createElement('div');
-facebookWidgetDiv.setAttribute('id', 'fb-root');
-facebookWidgetContainer.appendChild(facebookDiv);
-facebookWidgetContainer.appendChild(facebookWidgetDiv);
 let myVar = setInterval(myTimer, 1000);
 
 function myTimer() {
 if(fbPageId!== 0) {
+         facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
+         facebookWidgetContainer.style.display = 'none';
+        facebookWidgetDiv.setAttribute('id', 'fb-root');
+         facebookWidgetContainer.appendChild(facebookDiv);
+         facebookWidgetContainer.appendChild(facebookWidgetDiv);
+
+
+         facebookDiv.setAttribute("class", "fb-customerchat");
+         facebookDiv.setAttribute("id",'fb')
+         facebookDiv.setAttribute("minimized","true");
          facebookDiv.setAttribute("page_id", fbPageId);
          clearInterval(myVar);
  }
