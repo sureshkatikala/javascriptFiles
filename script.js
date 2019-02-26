@@ -11,9 +11,9 @@
   
 // <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
   FB.Event.subscribe('customerchat.dialogHide', function(){
-   FB.CustomerChat.hide();
-//    let facebookWidgetContainer = document.getElementById('facebook-widget-container');
-//     facebookWidgetContainer.style.display = 'none';
+//    FB.CustomerChat.hide();
+   let facebookWidgetContainer = document.getElementById('facebook-widget-container');
+    facebookWidgetContainer.style.display = 'none';
    
    var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "inline-grid";
@@ -176,7 +176,7 @@ facebookIcon.onclick = function() {
  }
 //  let facebookWidgetContainer = document.getElementById('facebook-widget-container');
  facebookWidgetContainer.style.display = 'inline';
- FB.CustomerChat.showDialog();
+//  FB.CustomerChat.showDialog();
 
 }
 // facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
