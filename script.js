@@ -11,7 +11,7 @@
   
 // <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
   FB.Event.subscribe('customerchat.dialogHide', function(){
-   FB.CustomerChat.hide();
+//    FB.CustomerChat.hide();
    let facebookWidgetContainer = document.getElementById('facebook-widget-container');
     facebookWidgetContainer.style.display = 'none';
    
@@ -22,10 +22,11 @@
 //     $(document).trigger('fbload'); 
  };
 
-let fbPageId = 0;
-let whatsappNumber;
+
 
 (function storeOwnerDetails(){
+ let fbPageId = 0;
+let whatsappNumber;
  let data = {storeUrl : window.location.host};
  return fetch('https://d35543c4.ngrok.io/getstoreowner', {
   method: 'POST', // or 'PUT'
@@ -41,10 +42,12 @@ let whatsappNumber;
   fbPageId = response.storeDetails.facebookPage;
   console.log(response);
   console.log(fbPageId)
+  loadWidget(fbPageId, whatsappNumber)
  })
 }());
 
 
+function  loadWidget(fbPageId, whatsappNumber) {
 (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
@@ -307,8 +310,8 @@ closeButton.onclick =  function(){
 document.body.appendChild(autochatIconContainer)
 document.body.appendChild(showOptionsContainer);
 document.body.appendChild(facebookWidgetContainer);
+}
 
 //     }())
 //let facebookIcon = document.getElementsByClassName('fb_dialog  fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge fb_customer_chat_bubble_pop_in');
-
 
