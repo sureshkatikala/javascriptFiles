@@ -101,6 +101,7 @@ var facebookDiv = document.createElement("div");
 facebookDiv.setAttribute("class", "fb-customerchat");
 facebookDiv.setAttribute("id",'fb')
 facebookDiv.setAttribute("minimized","true");
+facebookDiv.setAttribute("page_id", '0');
 
 let myVar = setInterval(myTimer, 1000);
 
