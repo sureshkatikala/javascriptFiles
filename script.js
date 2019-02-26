@@ -1,26 +1,26 @@
-//  window.fbAsyncInit = function() {
-//      FB.init({
-//        appId            : '1102875969894081',
-//        autoLogAppEvents : true,
-//        xfbml            : false,
-//        version          : 'v2.11'
-//      });
-// //   FB.Event.subscribe('customerchat.load', function(){
-// //    FB.CustomerChat.hideDialog();
-// //   });
-  
-// // <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
-//   FB.Event.subscribe('customerchat.dialogHide', function(){
-// //    FB.CustomerChat.hide();
-//    let facebookWidgetContainer = document.getElementById('facebook-widget-container');
-//     facebookWidgetContainer.style.display = 'none';
-   
-//    var showOptionsContainer = document.getElementById("chat-widget-container");
-//     showOptionsContainer.style.display = "inline-grid";
+ window.fbAsyncInit = function() {
+     FB.init({
+       appId            : '1102875969894081',
+       autoLogAppEvents : true,
+       xfbml            : false,
+       version          : 'v2.11'
+     });
+//   FB.Event.subscribe('customerchat.load', function(){
+//    FB.CustomerChat.hideDialog();
 //   });
+  
+// <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+  FB.Event.subscribe('customerchat.dialogHide', function(){
+//    FB.CustomerChat.hide();
+   let facebookWidgetContainer = document.getElementById('facebook-widget-container');
+    facebookWidgetContainer.style.display = 'none';
+   
+   var showOptionsContainer = document.getElementById("chat-widget-container");
+    showOptionsContainer.style.display = "inline-grid";
+  });
 
-// //     $(document).trigger('fbload'); 
-//  };
+//     $(document).trigger('fbload'); 
+ };
 
 
 
@@ -48,29 +48,7 @@ let whatsappNumber;
 
 
 function  loadWidget(fbPageId, whatsappNumber) {
-  window.fbAsyncInit = function() {
-     FB.init({
-       appId            : '1102875969894081',
-       autoLogAppEvents : true,
-       xfbml            : false,
-       version          : 'v2.11'
-     });
-//   FB.Event.subscribe('customerchat.load', function(){
-//    FB.CustomerChat.hideDialog();
-//   });
   
-// <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
-  FB.Event.subscribe('customerchat.dialogHide', function(){
-   FB.CustomerChat.hide();
-   let facebookWidgetContainer = document.getElementById('facebook-widget-container');
-    facebookWidgetContainer.style.display = 'none';
-   
-   var showOptionsContainer = document.getElementById("chat-widget-container");
-    showOptionsContainer.style.display = "inline-grid";
-  });
-
-//     $(document).trigger('fbload'); 
- };
 (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
