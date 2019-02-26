@@ -126,30 +126,36 @@ whatsapp.style = 'cursor: pointer';
 // var my_awesome_script = document.createElement('script');
 // my_awesome_script.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles@cce8ce7/fbchatplugin.js');
 
-let facebookWidgetContainer = document.createElement('div');
-facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
-facebookWidgetContainer.style.display = 'none';
+// let facebookWidgetContainer = document.createElement('div');
+// facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
+// facebookWidgetContainer.style.display = 'none';
 // facebookWidgetContainer.appendChild(facebookDiv);
 // showOptionsContainer.appendChild(facebookDiv);
 
 let myVar = setInterval(myTimer, 1000);
+let facebookWidgetContainer = document.createElement('div');
+var facebookDiv = document.createElement("div");
 
 function myTimer() {
- var facebookDiv = document.createElement("div");
+facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
+facebookWidgetContainer.style.display = 'none';
 facebookDiv.setAttribute("class", "fb-customerchat");
 facebookDiv.setAttribute("id",'fb')
 facebookDiv.setAttribute("minimized","true");
+ 
+let facebookWidgetDiv= document.createElement('div');
+facebookWidgetDiv.setAttribute('id', 'fb-root');
 
 if(fbPageId== 0) {
      facebookDiv.setAttribute("page_id", fbPageId);
- facebookWidgetContainer.appendChild(facebookDiv);
-  clearInterval(myVar);
+     facebookWidgetContainer.appendChild(facebookDiv);
+     facebookWidgetContainer.appendChild(facebookWidgetDiv);
+     clearInterval(myVar);
  }
 }
 
-let facebookWidgetDiv= document.createElement('div');
-facebookWidgetDiv.setAttribute('id', 'fb-root');
-facebookWidgetContainer.appendChild(facebookWidgetDiv);
+// let facebookWidgetDiv= document.createElement('div');
+// facebookWidgetDiv.setAttribute('id', 'fb-root');
 
 let flag = true;
 var facebookIcon = document.createElement('IMG');
