@@ -22,11 +22,12 @@
 //     $(document).trigger('fbload'); 
  };
 
-let fbPageId, whatsappNumber;
+let fbPageId = 0
+let whatsappNumber;
 
 (function storeOwnerDetails(){
  let data = {storeUrl : window.location.host};
- return fetch('https://0c9f2701.ngrok.io/getstoreowner', {
+ return fetch('https://d35543c4.ngrok.io/getstoreowner', {
   method: 'POST', // or 'PUT'
   body: JSON.stringify(data), // data can be `string` or {object}!
   headers:{
@@ -95,11 +96,24 @@ whatsapp.style = 'cursor: pointer';
 //      FB.Event.subscribe('customerchat.load', ()=>{
 //        FB.XFBML.parse(document.getElementById('chat-widget-container'));
 // });
+let myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
 var facebookDiv = document.createElement("div");
 facebookDiv.setAttribute("class", "fb-customerchat");
 facebookDiv.setAttribute("id",'fb')
-facebookDiv.setAttribute("page_id", "829136050510375");
 facebookDiv.setAttribute("minimized","true");
+if(fbPageId== 0) {
+     facebookDiv.setAttribute("page_id", fbPageId);
+  clearInterval(myVar);
+ }
+}
+
+// var facebookDiv = document.createElement("div");
+// facebookDiv.setAttribute("class", "fb-customerchat");
+// facebookDiv.setAttribute("id",'fb')
+// facebookDiv.setAttribute("page_id", "829136050510375");
+// facebookDiv.setAttribute("minimized","true");
 
 // let myVar = setInterval(myTimer, 1000);
 
