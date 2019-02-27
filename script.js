@@ -2,7 +2,7 @@
      FB.init({
        appId            : '1102875969894081',
        autoLogAppEvents : true,
-       xfbml            : true,
+       xfbml            : false,
        version          : 'v2.11'
      });
 //   FB.Event.subscribe('customerchat.load', function(){
@@ -22,11 +22,10 @@
 //     $(document).trigger('fbload'); 
  };
 
-
- let fbPageId=0;
+let fbPageId = 0;
 let whatsappNumber;
-(function storeOwnerDetails(){
 
+(function storeOwnerDetails(){
  let data = {storeUrl : window.location.host};
  return fetch('https://eed0243b.ngrok.io/getstoreowner', {
   method: 'POST', // or 'PUT'
@@ -42,13 +41,9 @@ let whatsappNumber;
   fbPageId = response.storeDetails.facebookPage;
   console.log(response);
   console.log(fbPageId)
-//   loadWidget(fbPageId, whatsappNumber)
  })
 }());
 
-
-// function  loadWidget(fbPageId, whatsappNumber) {
- 
 
 (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -57,7 +52,6 @@ let whatsappNumber;
         js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'))
-
 // console.log(FB);
 // $(document).on(
 //     'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
@@ -142,26 +136,24 @@ let facebookWidgetContainer = document.createElement('div');
 var facebookDiv = document.createElement("div");
 
 let facebookWidgetDiv= document.createElement('div');
-let myVar = setInterval(myTimer, 1000,fbPageId);
+let myVar = setInterval(myTimer, 1000);
 
-function myTimer(fbPageId) {
+function myTimer() {
 if(fbPageId!== 0) {
-        
-
-           facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
+         facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
          facebookWidgetContainer.style.display = 'none';
         facebookWidgetDiv.setAttribute('id', 'fb-root');
+         facebookWidgetContainer.appendChild(facebookDiv);
+         facebookWidgetContainer.appendChild(facebookWidgetDiv);
+
+
          facebookDiv.setAttribute("class", "fb-customerchat");
          facebookDiv.setAttribute("id",'fb')
          facebookDiv.setAttribute("minimized","true");
-          facebookWidgetContainer.appendChild(facebookDiv);
-         facebookWidgetContainer.appendChild(facebookWidgetDiv);
-         document.body.appendChild(facebookWidgetContainer);
          facebookDiv.setAttribute("page_id", fbPageId);
          clearInterval(myVar);
  }
 }
-       
 
 // let facebookWidgetDiv= document.createElement('div');
 // facebookWidgetDiv.setAttribute('id', 'fb-root');
@@ -177,14 +169,14 @@ facebookIcon.onclick = function() {
 //  var showOptionsContainer = document.getElementById("chat-widget-container");
     showOptionsContainer.style.display = "none";
 //  FB.XFBML.parse();
-//  if(flag){
-//   FB.XFBML.parse();
+ if(flag){
+  FB.XFBML.parse();
 //    FB.CustomerChat.showDialog();
-//   flag = false;
-//  }
+  flag = false;
+ }
 //  let facebookWidgetContainer = document.getElementById('facebook-widget-container');
  facebookWidgetContainer.style.display = 'inline';
- FB.CustomerChat.showDialog();
+//  FB.CustomerChat.showDialog();
 
 }
 // facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
@@ -314,8 +306,7 @@ closeButton.onclick =  function(){
 
 document.body.appendChild(autochatIconContainer)
 document.body.appendChild(showOptionsContainer);
-// }
+document.body.appendChild(facebookWidgetContainer);
 
 //     }())
 //let facebookIcon = document.getElementsByClassName('fb_dialog  fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge fb_customer_chat_bubble_pop_in');
-
