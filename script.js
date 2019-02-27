@@ -11,7 +11,7 @@
   
 // <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
   FB.Event.subscribe('customerchat.dialogHide', function(){
-//    FB.CustomerChat.hide();
+   FB.CustomerChat.hide();
    let facebookWidgetContainer = document.getElementById('facebook-widget-container');
     facebookWidgetContainer.style.display = 'none';
    
