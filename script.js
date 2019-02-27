@@ -141,9 +141,9 @@ let facebookWidgetContainer = document.createElement('div');
 var facebookDiv = document.createElement("div");
 
 let facebookWidgetDiv= document.createElement('div');
-let myVar = setInterval(myTimer, 1000);
+let myVar = setInterval(myTimer, 1000,fbPageId);
 
-function myTimer() {
+function myTimer(fbPageId) {
 if(fbPageId!== 0) {
          facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
          facebookWidgetContainer.style.display = 'none';
