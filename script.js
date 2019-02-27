@@ -2,7 +2,7 @@
      FB.init({
        appId            : '1102875969894081',
        autoLogAppEvents : true,
-       xfbml            : false,
+       xfbml            : true,
        version          : 'v2.11'
      });
 //   FB.Event.subscribe('customerchat.load', function(){
@@ -145,23 +145,20 @@ let myVar = setInterval(myTimer, 1000,fbPageId);
 
 function myTimer(fbPageId) {
 if(fbPageId!== 0) {
-         facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
-         facebookWidgetContainer.style.display = 'none';
-        facebookWidgetDiv.setAttribute('id', 'fb-root');
 
-
-
-         facebookDiv.setAttribute("class", "fb-customerchat");
-         facebookDiv.setAttribute("id",'fb')
-         facebookDiv.setAttribute("minimized","true");
          facebookDiv.setAttribute("page_id", fbPageId);
-          facebookWidgetContainer.appendChild(facebookDiv);
-         facebookWidgetContainer.appendChild(facebookWidgetDiv);
-         document.body.appendChild(facebookWidgetContainer);
-
          clearInterval(myVar);
  }
 }
+         facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
+         facebookWidgetContainer.style.display = 'none';
+        facebookWidgetDiv.setAttribute('id', 'fb-root');
+         facebookDiv.setAttribute("class", "fb-customerchat");
+         facebookDiv.setAttribute("id",'fb')
+         facebookDiv.setAttribute("minimized","true");
+          facebookWidgetContainer.appendChild(facebookDiv);
+         facebookWidgetContainer.appendChild(facebookWidgetDiv);
+         document.body.appendChild(facebookWidgetContainer);
 
 // let facebookWidgetDiv= document.createElement('div');
 // facebookWidgetDiv.setAttribute('id', 'fb-root');
