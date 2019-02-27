@@ -181,7 +181,7 @@ facebookIcon.onclick = function() {
 //  }
 //  let facebookWidgetContainer = document.getElementById('facebook-widget-container');
  facebookWidgetContainer.style.display = 'inline';
-//  FB.CustomerChat.showDialog();
+ FB.CustomerChat.showDialog();
 
 }
 // facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
