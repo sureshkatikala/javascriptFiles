@@ -10,14 +10,14 @@
 //   });
   
 // <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
-  FB.Event.subscribe('customerchat.dialogHide', function(){
-   FB.CustomerChat.hide();
-   let facebookWidgetContainer = document.getElementById('facebook-widget-container');
-    facebookWidgetContainer.style.display = 'none';
+//   FB.Event.subscribe('customerchat.dialogHide', function(){
+//    FB.CustomerChat.hide();
+//    let facebookWidgetContainer = document.getElementById('facebook-widget-container');
+//     facebookWidgetContainer.style.display = 'none';
    
-   var showOptionsContainer = document.getElementById("chat-widget-container");
-    showOptionsContainer.style.display = "inline-grid";
-  });
+//    var showOptionsContainer = document.getElementById("chat-widget-container");
+//     showOptionsContainer.style.display = "inline-grid";
+//   });
 
 //     $(document).trigger('fbload'); 
  };
@@ -48,6 +48,15 @@ let whatsappNumber;
 
 
 function  loadWidget(fbPageId, whatsappNumber) {
+ 
+  FB.Event.subscribe('customerchat.dialogHide', function(){
+   FB.CustomerChat.hide();
+   let facebookWidgetContainer = document.getElementById('facebook-widget-container');
+    facebookWidgetContainer.style.display = 'none';
+   
+   var showOptionsContainer = document.getElementById("chat-widget-container");
+    showOptionsContainer.style.display = "inline-grid";
+  });
   
 (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
