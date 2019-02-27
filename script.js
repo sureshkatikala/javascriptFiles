@@ -154,11 +154,7 @@ if(fbPageId!== 0) {
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'))
 
-         facebookDiv.setAttribute("page_id", fbPageId);
-         clearInterval(myVar);
- }
-}
-         facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
+           facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
          facebookWidgetContainer.style.display = 'none';
         facebookWidgetDiv.setAttribute('id', 'fb-root');
          facebookDiv.setAttribute("class", "fb-customerchat");
@@ -167,6 +163,11 @@ if(fbPageId!== 0) {
           facebookWidgetContainer.appendChild(facebookDiv);
          facebookWidgetContainer.appendChild(facebookWidgetDiv);
          document.body.appendChild(facebookWidgetContainer);
+         facebookDiv.setAttribute("page_id", fbPageId);
+         clearInterval(myVar);
+ }
+}
+       
 
 // let facebookWidgetDiv= document.createElement('div');
 // facebookWidgetDiv.setAttribute('id', 'fb-root');
