@@ -23,10 +23,10 @@
  };
 
 
-
-(function storeOwnerDetails(){
- let fbPageId = 0;
+ let fbPageId=0;
 let whatsappNumber;
+(function storeOwnerDetails(){
+
  let data = {storeUrl : window.location.host};
  return fetch('https://eed0243b.ngrok.io/getstoreowner', {
   method: 'POST', // or 'PUT'
