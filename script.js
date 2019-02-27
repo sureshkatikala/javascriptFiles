@@ -148,14 +148,17 @@ if(fbPageId!== 0) {
          facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
          facebookWidgetContainer.style.display = 'none';
         facebookWidgetDiv.setAttribute('id', 'fb-root');
-         facebookWidgetContainer.appendChild(facebookDiv);
-         facebookWidgetContainer.appendChild(facebookWidgetDiv);
+
 
 
          facebookDiv.setAttribute("class", "fb-customerchat");
          facebookDiv.setAttribute("id",'fb')
          facebookDiv.setAttribute("minimized","true");
          facebookDiv.setAttribute("page_id", fbPageId);
+          facebookWidgetContainer.appendChild(facebookDiv);
+         facebookWidgetContainer.appendChild(facebookWidgetDiv);
+         document.body.appendChild(facebookWidgetContainer);
+
          clearInterval(myVar);
  }
 }
@@ -311,7 +314,6 @@ closeButton.onclick =  function(){
 
 document.body.appendChild(autochatIconContainer)
 document.body.appendChild(showOptionsContainer);
-document.body.appendChild(facebookWidgetContainer);
 // }
 
 //     }())
