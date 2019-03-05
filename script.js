@@ -166,27 +166,28 @@ if(fbPageId!== undefined || "") {
 
 // let facebookWidgetDiv= document.createElement('div');
 // facebookWidgetDiv.setAttribute('id', 'fb-root');
+if(fbPageId != undefined) {
+     let flag = true;
+     var facebookIcon = document.createElement('IMG');
+     facebookIcon.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles/icons8-facebook-messenger-filled-100.png');
+     facebookIcon.setAttribute("width", "48");
+     facebookIcon.setAttribute("height", "48");
+     facebookIcon.setAttribute("alt", "messenger icon");
+     facebookIcon.style = 'cursor: pointer';
+     facebookIcon.onclick = function() {
+     //  var showOptionsContainer = document.getElementById("chat-widget-container");
+         showOptionsContainer.style.display = "none";
+     //  FB.XFBML.parse();
+      if(flag){
+       FB.XFBML.parse();
+     //    FB.CustomerChat.showDialog();
+       flag = false;
+      }
+     //  let facebookWidgetContainer = document.getElementById('facebook-widget-container');
+      facebookWidgetContainer.style.display = 'inline';
+      FB.CustomerChat.showDialog();
 
-let flag = true;
-var facebookIcon = document.createElement('IMG');
-facebookIcon.setAttribute('src','https://cdn.jsdelivr.net/gh/sureshkatikala/javascriptFiles/icons8-facebook-messenger-filled-100.png');
-facebookIcon.setAttribute("width", "48");
-facebookIcon.setAttribute("height", "48");
-facebookIcon.setAttribute("alt", "messenger icon");
-facebookIcon.style = 'cursor: pointer';
-facebookIcon.onclick = function() {
-//  var showOptionsContainer = document.getElementById("chat-widget-container");
-    showOptionsContainer.style.display = "none";
-//  FB.XFBML.parse();
- if(flag){
-  FB.XFBML.parse();
-//    FB.CustomerChat.showDialog();
-  flag = false;
- }
-//  let facebookWidgetContainer = document.getElementById('facebook-widget-container');
- facebookWidgetContainer.style.display = 'inline';
- FB.CustomerChat.showDialog();
-
+     }
 }
 // facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
 // function showFbChat(d,s,id){
