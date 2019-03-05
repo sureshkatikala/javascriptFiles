@@ -157,7 +157,7 @@ if(fbPageId!== undefined || "") {
          facebookDiv.setAttribute("page_id", fbPageId);
 //          clearInterval(myVar);
  }
-}
+
 
 // let facebookWidgetDiv= document.createElement('div');
 // facebookWidgetDiv.setAttribute('id', 'fb-root');
