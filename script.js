@@ -41,7 +41,7 @@ let whatsappNumber;
   whatsappNumber = response.storeDetails.whatsappContact;
   fbPageId = response.storeDetails.facebookPage;
   console.log(response);
-  console.log(fbPageId)
+  console.log(fbPageId);
   loadWidget(fbPageId, whatsappNumber)
  })
 }());
@@ -139,10 +139,11 @@ let facebookWidgetContainer = document.createElement('div');
 var facebookDiv = document.createElement("div");
 
 let facebookWidgetDiv= document.createElement('div');
-let myVar = setInterval(myTimer, 1000, fbPageId);
-
-function myTimer(fbPageId) {
-if(fbPageId!== 0) {
+// if(fbPageId !== undefined) {
+//      let myVar = setInterval(myTimer, 1000, fbPageId);
+// }
+// function myTimer(fbPageId) {
+if(fbPageId!== undefined || "") {
          facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
          facebookWidgetContainer.style.display = 'none';
         facebookWidgetDiv.setAttribute('id', 'fb-root');
@@ -154,7 +155,7 @@ if(fbPageId!== 0) {
          facebookDiv.setAttribute("id",'fb')
          facebookDiv.setAttribute("minimized","true");
          facebookDiv.setAttribute("page_id", fbPageId);
-         clearInterval(myVar);
+//          clearInterval(myVar);
  }
 }
 
