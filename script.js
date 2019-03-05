@@ -157,6 +157,8 @@ if(fbPageId!== undefined || "") {
          facebookDiv.setAttribute("id",'fb')
          facebookDiv.setAttribute("minimized","true");
          facebookDiv.setAttribute("page_id", fbPageId);
+          showOptionsContainer.appendChild(facebookIcon)
+
          clearInterval(myVar);
  }
      if(intervalCount === 10) {
@@ -188,6 +190,7 @@ if(fbPageId != undefined) {
       FB.CustomerChat.showDialog();
 
      }
+     
 }
 // facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
 // function showFbChat(d,s,id){
@@ -258,7 +261,6 @@ whatsapp.onclick = function(){
 showOptionsContainer.style = "bottom:18pt;right:18pt;position:fixed;z-index: 9999";
 
 // showOptionsContainer.appendChild(firebasescript)
-showOptionsContainer.appendChild(facebookIcon)
 // showOptionsContainer.appendChild(my_awesome_script);
 showOptionsContainer.style.display = "none";
 
