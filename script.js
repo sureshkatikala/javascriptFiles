@@ -139,10 +139,12 @@ let facebookWidgetContainer = document.createElement('div');
 var facebookDiv = document.createElement("div");
 
 let facebookWidgetDiv= document.createElement('div');
-// if(fbPageId !== undefined) {
-//      let myVar = setInterval(myTimer, 1000, fbPageId);
-// }
-// function myTimer(fbPageId) {
+if(fbPageId !== undefined) {
+     let myVar = setInterval(myTimer, 1000, fbPageId);
+}
+let intervalCount = 0;
+function myTimer(fbPageId) {
+     intervalCount++;
 if(fbPageId!== undefined || "") {
          facebookWidgetContainer.setAttribute('id', 'facebook-widget-container');
          facebookWidgetContainer.style.display = 'none';
@@ -155,9 +157,12 @@ if(fbPageId!== undefined || "") {
          facebookDiv.setAttribute("id",'fb')
          facebookDiv.setAttribute("minimized","true");
          facebookDiv.setAttribute("page_id", fbPageId);
-//          clearInterval(myVar);
+         clearInterval(myVar);
  }
-
+     if(intervalCount === 10) {
+          clearInterval(myVar);
+     }
+}
 
 // let facebookWidgetDiv= document.createElement('div');
 // facebookWidgetDiv.setAttribute('id', 'fb-root');
