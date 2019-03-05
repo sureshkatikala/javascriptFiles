@@ -157,7 +157,6 @@ if(fbPageId!== undefined || "") {
          facebookDiv.setAttribute("id",'fb')
          facebookDiv.setAttribute("minimized","true");
          facebookDiv.setAttribute("page_id", fbPageId);
-          showOptionsContainer.appendChild(facebookIcon)
 
          clearInterval(myVar);
  }
@@ -176,6 +175,7 @@ if(fbPageId != undefined) {
      facebookIcon.setAttribute("height", "48");
      facebookIcon.setAttribute("alt", "messenger icon");
      facebookIcon.style = 'cursor: pointer';
+     
      facebookIcon.onclick = function() {
      //  var showOptionsContainer = document.getElementById("chat-widget-container");
          showOptionsContainer.style.display = "none";
@@ -188,8 +188,8 @@ if(fbPageId != undefined) {
      //  let facebookWidgetContainer = document.getElementById('facebook-widget-container');
       facebookWidgetContainer.style.display = 'inline';
       FB.CustomerChat.showDialog();
-
      }
+     showOptionsContainer.appendChild(facebookIcon);
      
 }
 // facebookIcon.onclick = showFbChat(document, 'script', 'facebook-jssdk');
