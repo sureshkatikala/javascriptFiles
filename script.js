@@ -139,9 +139,9 @@ let facebookWidgetContainer = document.createElement('div');
 var facebookDiv = document.createElement("div");
 
 let facebookWidgetDiv= document.createElement('div');
-if(fbPageId !== undefined) {
-     let myVar = setInterval(myTimer, 1000, fbPageId);
-}
+ 
+     
+let myVar = setInterval(myTimer, 1000, fbPageId);
 let intervalCount = 0;
 function myTimer(fbPageId) {
      intervalCount++;
