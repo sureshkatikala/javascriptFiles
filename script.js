@@ -28,7 +28,7 @@ window.fbAsyncInit = function() {
  let fbPageId = 0;
 let whatsappNumber;
  let data = {storeUrl : window.location.host};
- return fetch('https://79a79e4a.ngrok.io/getstoreowner', {
+ return fetch('https://6c3c852f.ngrok.io/getstoreowner', {
   method: 'POST', // or 'PUT'
   body: JSON.stringify(data), // data can be `string` or {object}!
   headers:{
@@ -41,6 +41,7 @@ let whatsappNumber;
   whatsappNumber = response.storeDetails.whatsappContact;
   fbPageId = response.storeDetails.facebookPage;
   console.log(response);
+  console.log(whatsappNumber);
   console.log(fbPageId);
   loadWidget(fbPageId, whatsappNumber)
  })
