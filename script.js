@@ -91,13 +91,16 @@ closeButton.style = 'cursor: pointer';
 
 var whatsappContainer = document.createElement("div");
 whatsappContainer.setAttribute("id","whatsapp-button-container");
-
+if(whatsappNumber !== undefined){
 var whatsapp = document.createElement("IMG");
 whatsapp.setAttribute("src", "https://image1.jdomni.in/jdomni_email/whatsapp_popup.png");
 whatsapp.setAttribute("width", "48");
 whatsapp.setAttribute("height", "48");
 whatsapp.setAttribute("alt", "whatsapp icon");
 whatsapp.style = 'cursor: pointer';
+ whatsappContainer.appendChild(whatsapp);
+
+}
 //      FB.Event.subscribe('customerchat.load', ()=>{
 //        FB.XFBML.parse(document.getElementById('chat-widget-container'));
 // });
@@ -265,7 +268,6 @@ showOptionsContainer.style = "bottom:18pt;right:18pt;position:fixed;z-index: 999
 // showOptionsContainer.appendChild(my_awesome_script);
 showOptionsContainer.style.display = "none";
 
-whatsappContainer.appendChild(whatsapp);
 closeButtonContainer.appendChild(closeButton);
 showOptionsContainer.appendChild(whatsappContainer);
 showOptionsContainer.appendChild(closeButtonContainer);
