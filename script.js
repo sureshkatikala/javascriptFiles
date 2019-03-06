@@ -93,13 +93,20 @@ var whatsappContainer = document.createElement("div");
 whatsappContainer.setAttribute("id","whatsapp-button-container");
 if(whatsappNumber !== undefined){
 var whatsapp = document.createElement("IMG");
-whatsapp.setAttribute("src", "https://image1.jdomni.in/jdomni_email/whatsapp_popup.png");
-whatsapp.setAttribute("width", "48");
-whatsapp.setAttribute("height", "48");
-whatsapp.setAttribute("alt", "whatsapp icon");
-whatsapp.style = 'cursor: pointer';
- whatsappContainer.appendChild(whatsapp);
-
+     whatsapp.setAttribute("src", "https://image1.jdomni.in/jdomni_email/whatsapp_popup.png");
+     whatsapp.setAttribute("width", "48");
+     whatsapp.setAttribute("height", "48");
+     whatsapp.setAttribute("alt", "whatsapp icon");
+     whatsapp.style = 'cursor: pointer';
+     whatsappContainer.appendChild(whatsapp);
+     whatsapp.onclick = function(){
+       if( isMobile.any()) { 
+         window.open("https://wa.me/" + whatsappNumber, "_blank");
+       }
+       else {
+         window.open("https://web.whatsapp.com/send?phone=" + whatsappNumber, "_blank");
+       }
+     }
 }
 //      FB.Event.subscribe('customerchat.load', ()=>{
 //        FB.XFBML.parse(document.getElementById('chat-widget-container'));
@@ -254,14 +261,14 @@ var isMobile = {
     },
 }
 
-whatsapp.onclick = function(){
-  if( isMobile.any()) { 
-    window.open("https://wa.me/" + whatsappNumber, "_blank");
-  }
-  else {
-    window.open("https://web.whatsapp.com/send?phone=" + whatsappNumber, "_blank");
-  }
-}
+// whatsapp.onclick = function(){
+//   if( isMobile.any()) { 
+//     window.open("https://wa.me/" + whatsappNumber, "_blank");
+//   }
+//   else {
+//     window.open("https://web.whatsapp.com/send?phone=" + whatsappNumber, "_blank");
+//   }
+// }
 showOptionsContainer.style = "bottom:18pt;right:18pt;position:fixed;z-index: 9999";
 
 // showOptionsContainer.appendChild(firebasescript)
