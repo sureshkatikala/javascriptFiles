@@ -28,7 +28,7 @@ window.fbAsyncInit = function() {
  let fbPageId = 0;
 let whatsappNumber;
  let data = {storeUrl : window.location.host};
- return fetch('https://8cf58220.ngrok.io/getstoreowner', {
+ return fetch('https://a4e262f1.ngrok.io/getstoreowner', {
   method: 'POST', // or 'PUT'
   body: JSON.stringify(data), // data can be `string` or {object}!
   headers:{
